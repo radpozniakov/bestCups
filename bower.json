@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "description": "my portfolio page",
+  "main": "index.js",
+  "authors": [
+    "Rad"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "normalize-css": "^7.0.0"
+  }
+}

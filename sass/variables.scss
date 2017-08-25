@@ -1,19 +1,27 @@
-// //Colors
-// $Matherial-Blue:#2D333E;
-// $Body-Background: #EDEDED;
-// $White:#FFFFFF;
-// $Gray: #B9B9B9;
-// $Blue: #4B99CC;
+ //Colors
+ $Dark: #31343E;
+ $Blue-active: #4587C8;
+ $Gray: #747474;
+ //Font-Family
+ $Main-Font: 'Roboto', sans-serif;
 
-// //Font-Family
-// $Main-Font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ @mixin font($family-type, $size: 1rem, $weight : normal, $color :  $Dark){
+   font: {
+     family: $family-type;
+     size: $size;
+     weight: $weight;
+   }
+   color: $color;
+ }
 
-// @mixin font($family-type, $size: 1rem, $weight : normal, $color : $Matherial-Blue){
-//   font: {
-//     family: $family-type;
-//     size: $size;
-//     weight: $weight;
-//   }
-//   color: $color;
-// }
+ @mixin el($element){
+   &__#{$element}{
+     @content;
+   }
+ }
 
+ @mixin mod($modifier){
+   &--#{$modifier}{
+     @content;
+   }
+ }

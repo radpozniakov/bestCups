@@ -1,0 +1,39 @@
+@include breakpoint(max-width 890px){
+  .topFooter{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    > div{
+      margin: 0;
+    }
+  }
+  .contactsFooter{
+    order: 2;
+  }
+  .aboutFooter{
+    order: 1;
+    max-width: 100%;
+    border-bottom: solid 1px $Gray;
+  }
+  .navFooter{
+    display: none;
+  }
+}
+@include breakpoint(max-width 768px){
+  .bottomFooter{
+    display: block;
+    @include el('list'){
+      display: none;
+    }
+    @include el('text'){
+      text-align: center;
+    }
+  }
+}
+
+@include breakpoint(max-width 520px){
+  .topFooter{
+    padding: 1rem;
+  }
+}

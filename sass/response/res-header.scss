@@ -1,0 +1,166 @@
+ @include breakpoint(max-width 1024px){
+   .header{
+     padding: 0 1rem;
+   }
+
+   .navigation{
+     @include mod('inline'){
+       margin: 0rem 1rem;
+     }
+   }
+
+   .logotype{
+     @include el('item'){
+       &:last-child{
+         padding-left: 0rem;
+       }
+       @include mod('shapes'){
+         display: none;
+       }
+     }
+   }
+   .userTools{
+     @include el('item') {
+       margin: 0rem 0.5rem;
+     }
+     @include el('item'){
+       @include mod('basket'){
+         padding-right: 1rem;
+       }
+     }
+   }
+ }
+
+ @include breakpoint(max-width 890px){
+   .header{
+     padding: 0 1rem;
+   }
+   .logotype{
+     @include el('item'){
+       svg{
+         width: 3rem;
+       }
+       &:last-child{
+         padding-left: 0.6rem;
+       }
+       @include mod('shapes'){
+         display: inline-block;
+       }
+       @include mod('topMenu'){
+         padding-top: 0.5rem;
+         padding-bottom: 0.5rem;
+       }
+     }
+
+   }
+   .navigation{
+     @include mod('inline'){
+       display: none;
+       position: absolute;
+       background-color: white;
+       width: 100%;
+       left: 0;
+       margin: 0;
+       top: 4.93rem;
+       text-align: center;
+       line-height: 1rem;
+       padding: 1rem 0;
+     }
+     @include el('item'){
+       @include mod('megaMenu'){
+         > a{
+           &::after{
+             display: none;
+           }
+         }
+         > div{
+           display: none;
+         }
+         &:hover > div{
+           display: none;
+         }
+       }
+     }
+   }
+
+
+   .userTools{
+     @include mod('inline'){
+       display: flex;
+       padding: 1.7rem 0 0;
+       margin: 0;
+     }
+     @include el('item'){
+       @include mod('search'){
+         a svg{
+           width: 1.5rem;
+           g{
+             fill: $Dark;
+           }
+         }
+       }
+       @include mod('profile'){
+         a svg{
+           width: 1.5rem;
+           g{
+             fill: $Dark;
+           }
+         }
+       }
+       @include mod('basket'){
+         padding-right:4.3rem;
+
+         ::after{
+           @include font($Main-Font, 1rem, 500, white);
+         }
+         a svg{
+           width: 1.5rem;
+           g{
+             fill: $Dark;
+           }
+         }
+       }
+       @include mod('burgerMenu'){
+         display: block;
+         padding-left: 0.3rem;
+         padding-right: 0.3rem;
+         a svg{
+           width: 2rem;
+           g{
+             fill: $Dark;
+           }
+         }
+       }@include mod('clearMenu'){
+         display: none;
+         padding-left: 0.3rem;
+         padding-right: 0.3rem;
+         a svg{
+           width: 2rem;
+           g{
+             fill: $Dark;
+           }
+         }
+       }
+     }
+   }
+   .searhTop{
+     @include el('input'){
+       height: 4.65rem;
+     }
+     @include el('clear'){
+       top: 1.8rem;
+     }
+   }
+ }
+ @include breakpoint(max-width 350px){
+   .userTools{
+     @include el('item'){
+       @include mod('search'){
+         display: none;
+       }
+       @include mod('profile'){
+         display: none;
+       }
+     }
+   }
+ }

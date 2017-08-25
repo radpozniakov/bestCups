@@ -1,0 +1,155 @@
+.topFooter-wrapper{
+  background-color: $Dark;
+}
+.topFooter{
+  max-width: 90rem;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  padding: 3rem 3rem;
+  justify-content: space-between;
+  > div{
+    margin: 0 2.5rem;
+    &:first-child{
+      margin-left: 0;
+    }
+    &:last-child{
+      margin-right:0;
+    }
+  }
+}
+
+.contactsFooter{
+  flex-grow: 1;
+  @include el('title'){
+    @include font($Main-Font, 1.125rem, 400, white);
+    text-transform: uppercase;
+    opacity: 0.5;
+    letter-spacing: 1px;
+  }
+  @include el('map'){
+    width: 100%;
+    height: 12rem;
+    margin-top: 1.4rem;
+    background-color: white;
+    background-image: url('https://cdn.arstechnica.net/wp-content/uploads/2016/02/google-maps-640x430.jpg');
+  }
+  @include el('contactsList'){
+    list-style: none;
+    padding: 0;
+  }
+  @include el('contactsListItem'){
+    @include font($Main-Font, 1rem, 300, white);
+    line-height: 1.9rem;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    svg {
+      width: 1rem;
+      padding-right:0.5rem;
+      position: relative;
+      top: 0.125rem;
+      opacity: 0.5;
+      g{
+        fill: white;
+      }
+    }
+  }
+}
+
+
+.aboutFooter{
+  flex-grow: 1;
+  max-width: 40%;
+  @include el('title'){
+    @include font($Main-Font, 1.125rem, 400, white);
+    text-transform: uppercase;
+    opacity: 0.5;
+    letter-spacing: 1px;
+  }
+  @include el('text'){
+    @include font($Main-Font, 1rem, 300, white);
+    line-height: 1.7rem;
+  }
+  @include el('social'){
+    list-style: none;
+    padding: 0;
+  }
+  @include el('socialItem'){
+    display: inline-block;
+    margin-right: 1rem;
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover{
+      a svg g {
+        fill: $Blue-active;
+      }
+    }
+  }
+}
+
+.navFooter{
+  flex-grow: 1;
+  @include el('title'){
+    @include font($Main-Font, 1.125rem, 400, white);
+    text-transform: uppercase;
+    opacity: 0.5;
+    letter-spacing: 1px;
+  }
+}
+.navFooter .navigation{
+  @include mod('footer'){
+  }
+  @include el('item'){
+    padding: 0.7rem 0;
+    border-bottom: solid 1px $Gray;
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  @include el('href'){
+    @include mod('footer'){
+      @include font($Main-Font, 1.1rem, 300, white);
+    }
+    &:hover{
+      color: $Blue-active;
+    }
+  }
+}
+
+.bottomFooter-wrapper{
+  background-color: $Blue-active;
+  padding: 1rem 0;
+}
+.bottomFooter{
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  @include el('text'){
+    @include font($Main-Font, 1rem, 300, white);
+    opacity: 0.6;
+  }
+  @include el('list'){
+    list-style: none;
+  }
+  @include el('listItem'){
+    display: inline-block;
+    margin: 0 1.5rem;
+    &:last-child{
+      margin: 0;
+    }
+  }
+  @include el('href'){
+    color: white;
+    text-decoration: none;
+    @include font($Main-Font, 1rem, 300, white);
+    &:hover{
+      color: $Dark;
+    }
+  }
+}

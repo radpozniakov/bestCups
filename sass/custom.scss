@@ -1,6 +1,9 @@
 @import "normalize";
 @import "breakpoint";
 @import 'variables';
+@import 'header';
+@import 'footer';
 
 //////////////////////////////////// RESPONSE FILES ///////////////////////////////////////////
-@import "./response/res-categories-section";
+@import "./response/res-header";
+@import "./response/res-footer";

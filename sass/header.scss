@@ -1,0 +1,221 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+  border-bottom: solid 1px #ccc;
+  @include mod('hidden'){
+    display: none;
+  }
+  @include el('navigation'){
+    flex-grow: 2;
+  }
+}
+.logotype{
+  margin: 0rem;
+  padding: 0rem;
+  @include el('item'){
+  display: inline-block;
+   &:last-child{
+     padding-left: 1rem;
+   }
+    @include mod('topMenu'){
+      padding-top: 1.125rem;
+      padding-bottom: 1.125rem;
+    }
+  }
+}
+.navigation{
+  padding: 0px;
+  list-style: none;
+  @include mod('inline'){
+    max-width: 64rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    line-height: 4.1rem;
+    li a{
+      display: inline-block;
+    }
+  }
+  @include el('item'){
+    @include mod('megaMenu'){
+      > a{
+        &::after{
+          content: ('');
+          position: relative;
+          top: 0.875rem;
+          left: 0.5rem;
+          width: 0;
+          height: 0;
+          border-left: 0.5rem solid transparent;
+          border-right: 0.5rem solid transparent;
+          border-top: 0.5rem solid $Dark;
+        }
+      }
+      > div{
+        display: none;
+      }
+      &:hover > div{
+        display: flex;
+      }
+      @include font($Main-Font, 1.124rem, 400, $Dark );
+      letter-spacing: 1px;
+    }
+  }
+  @include el('href'){
+    text-decoration: none;
+    &:hover{
+      color: $Blue-active;
+      &::after{
+        border-top: 8px solid $Blue-active;
+      }
+    }
+    @include mod('header'){
+      @include font($Main-Font, 1.124rem, 400, $Dark );
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 1.125rem 0;
+    }
+    @include mod('active'){
+      color: $Blue-active;
+      &::after{
+        border-top: 0.5rem solid $Blue-active !important;
+      }
+    }
+  }
+}
+.megaMenu{
+  z-index: 4;
+  width: 100%;
+  position: absolute;
+  left: 0rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(240,240,240);
+  @include el('item'){
+    padding: 0rem 4rem;
+    margin-bottom: 2rem;
+    max-width: 15%;
+  }
+  @include el('title'){
+    margin: 1rem 0rem;
+    margin-top: 1.5rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+    color: $Dark;
+  }
+  @include el('list'){
+    list-style: none;
+    padding: 0rem;
+  }
+  @include el('listItem'){
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: .6rem 0;
+    border-top: solid 1px #dbdbdb;
+  }
+  @include el('listHref'){
+    text-decoration: none;
+    color: $Dark;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    &:hover{
+      color: $Blue-active;
+      cursor: pointer;
+    }
+  }
+}
+
+.userTools{
+  list-style: none;
+  padding: 0rem;
+  @include mod('inline'){
+    display: flex;
+    padding: 1.4rem 0 0 0;
+  }
+  @include el('item'){
+    margin: 0rem 1rem;
+    :hover svg g{
+      fill: $Dark;
+    }
+    &:last-child{
+      margin-right: 0rem;
+    }
+    &:first-child{
+      margin-left: 0rem;
+    }
+
+    @include mod('basket'){
+      position: relative;
+      ::after{
+       content: attr(data-counter);
+        display: none;
+        top: -1rem;
+        left: 1rem;
+        background-color: $Blue-active;
+        width: 1.6rem;
+        height: 1.6rem;
+        position: absolute;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1.6rem;
+        @include font($Main-Font, .9rem, 300, white);
+      }
+    }
+    @include mod('visibleCounter'){
+      ::after{
+        display: block;
+      }
+    }
+    @include mod('burgerMenu'){
+      display: none;
+      position: absolute;
+      right: 0.5rem;
+    }
+    @include mod('clearMenu'){
+      display: none;
+      position: absolute;
+      right: 1rem;
+    }
+  }
+}
+.searhTop {
+  position: absolute;
+  display: none;
+  width: 99.1%;
+  top: 0;
+  left: 0;
+  @include mod('hidden'){
+    display: none;
+  }
+  @include el('input') {
+    width: 100%;
+    text-align: center;
+    height: 5.75rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: $Dark;
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: none;
+    outline: none;
+  }
+  @include el('clear'){
+    width: 1.4rem;
+    position: absolute;
+    top: 2.5rem;
+    right: 0rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    g g{
+      fill: $Dark;
+    }
+  }
+}
+
+
+
+

@@ -16,6 +16,7 @@ gulp.task('sass', function() {
         cascade: false
       }))
     .pipe(cssnano())
+      .pipe(cssnano({ zindex: false }))
     .pipe(gulp.dest('./app/css'))
     .pipe(browserSync.reload({stream: true}));
 });

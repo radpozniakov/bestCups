@@ -1,0 +1,241 @@
+.productSection{
+  background-color: white;
+
+
+}
+h2.title-section {
+  @include font($Main-Font, 1.75rem, 400, $Dark );
+  text-align: center;
+  margin: 0px 0px 5rem;
+  position: relative;
+  &.title-section_section_product-index{
+    &:after{
+      content: '';
+      position: absolute;
+      width:5.8125rem;
+      height:1px;
+      background-color: #D6D6D6;
+      bottom:-1.125rem;
+      left:47%;
+    }
+  }
+}
+.production-list{
+  max-width: 47.1875rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem auto 4.1875rem;
+}
+.production-item{
+  width:8.75rem;
+  &:hover{
+    .production-item__title{
+      color: $Blue-active;
+    }
+    .production-item__logo{
+      svg{
+        g,ellipse{
+          fill: $Blue-active;
+        }
+      }
+    }
+  }
+  &__logo{
+    max-height: 5rem;
+    height:5rem;
+    margin: 1.125rem auto 1rem;
+
+    svg{
+      margin: 0px auto;
+      max-height: inherit;
+      display: block;
+      min-height: 4.375rem;
+    }
+  }
+  &__title{
+    text-transform: uppercase;
+    text-align: center;
+    @include font($Main-Font, 1.125rem, 400, $Dark );
+    letter-spacing: 1px;
+  }
+}
+.production-info{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  padding: 1.1875rem 0rem 0rem;
+  &__logo{
+    width:48.48%;
+    max-width: 48.48%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__content{
+    width:46.92%;
+  }
+}
+.production_content{
+  position: relative;
+  &__text{
+    padding: 2.25rem 0rem 0rem;
+    border-top:1px solid #D6D6D6;
+    @include font($Main-Font, 1rem, 400, $Dark );
+    line-height: 1.5625rem;
+    margin: 0px 0px 1.25rem;
+  }
+  &__title{
+    position: absolute;
+    display: flex;
+    width:15.625rem;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    top:-1.1875rem;
+    left:2.75rem;
+    @include font($Main-Font, 1.75rem, 400, $Dark );
+    span{
+      margin-right: 1.125rem;
+      align-self: flex-end;
+    }
+    svg{
+      max-height: 38px;
+    }
+  }
+
+
+}
+.postsSection{
+  background-color: #F6F6F6;
+}
+.public-list{
+  max-width:64.0625rem ;
+  margin: 0rem auto 3.375rem;
+  &__wrapper{
+
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.public-list-item{
+  width:47.8%;
+  &__logo{
+    height:15.6875rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__text{
+    margin: 0px;
+    line-height: 1.625rem;
+    @include font($Main-Font, 1.125rem, 400, $Dark );
+  }
+  &__title{
+    margin:1.25rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__name{
+    margin:0px;
+    @include font($Main-Font, 1.25rem, 500, $Dark );
+  }
+  &__date{
+    @include font($Main-Font, 0.875rem, 400, $Dark );
+  }
+
+}
+
+
+.feedBackSection{
+  background-color: white;
+}
+.feedback-list{
+  width:57rem;
+  margin:0px auto;
+
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.feedback_item{
+  width:29.93421053%;
+  position: relative;
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,.5);
+  &:hover{
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.5);
+  }
+  &__logo{
+    position: relative;
+    top:-2.25rem;
+    width:5.5rem;
+    height:5.5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin:0px auto;
+  }
+  &__title{
+    margin:-1.5rem 0px 0px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @include font($Main-Font, 0.875rem, 500, $Dark );
+  }
+  &__text{
+    line-height: 1.3125rem;
+    padding: 0rem 1.25rem;
+    margin: 0rem 0rem 1.875rem;
+    text-align: center;
+    @include font($Main-Font, 0.875rem, 400, $Dark );
+  }
+}
+.opt-block{
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text{
+    width:45%;
+    p{
+      @include font($Main-Font, 1rem, 400,$Dark );
+      line-height: 1.625rem;
+    }
+  }
+  &__form{
+    width:45%;
+  }
+}
+.form-main-opt{
+  *{
+    margin: 0px;
+  }
+  .input-group{
+    margin:0rem 0rem 1.21875rem;
+    display: flex;
+    flex-direction: column;
+    label{
+      margin-bottom: 0.625rem;
+      @include font($Main-Font, 1rem, 400,$Dark );
+    }
+    input[type='text'],textarea{
+      background-color: #F5F5F5;
+      resize: none;
+      border:1px solid #D8D8D8;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      line-height: 1.625rem;
+      outline: none;
+      @include font($Main-Font, 0.875rem, 400,$Dark );
+      &:active,&:hover,&:focus{
+        border-color: #4587C8;
+      }
+    }
+  }
+}
+.wholesaleBuyersSection{
+  background-color:#F6F6F6;
+
+}

@@ -1,0 +1,135 @@
+.container{
+    max-width: 90rem;
+    margin: 0 auto;
+  padding: 3rem 3rem;
+}
+.color-list{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.6875rem;
+}
+.color-item{
+  cursor: pointer;
+  margin-right: 1.5rem;
+  &__color{
+    width:2.3125rem;
+    height:2.3125rem;
+    border-radius: 50%;
+    margin: 0rem auto 0.5rem;
+    border:1px solid #979797;
+  }
+  &__title{
+    margin: 0px;
+    text-align: center;
+    @include font($Main-Font, 1rem, 400, $Dark );
+  }
+}
+.tag-list{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.875rem;
+}
+.tag-item{
+  cursor: pointer;
+  background-color: #E9F5FD;
+  width:5.5rem;
+  text-align: center;
+  padding: 0.5625rem 0rem;
+  margin-right: 0.75rem;
+  border-radius: 0.75rem;
+  @include font($Main-Font, 1rem, 400, $Dark );
+}
+a.more,input.more{
+  display: block;
+
+  padding:0.625rem 0rem ;
+  margin:0rem 0rem 1.5rem;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: #4587C8;
+  @include font($Main-Font, 1.125rem, 400,white );
+  &_page_catalog{
+    width:10.125rem;
+  }
+  &_page_public{
+    width:11.875rem;
+    margin: 0px auto 1.5rem;
+  }
+  &_button_form{
+    width:10.25rem;
+    border: none;
+    margin:0.4rem 0rem 1.5rem;
+  }
+}
+.star-list{
+  display: flex;
+  margin:1.25rem auto;
+  width:5.875rem;
+}
+.star-item{
+  width:1.049375rem;
+  height:0.99375rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.opt-block{
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text{
+    width:45%;
+    p{
+      @include font($Main-Font, 1rem, 400,$Dark );
+      line-height: 1.625rem;
+    }
+
+  }
+
+
+}
+.introSection{
+  position: relative;
+.owl-dots{
+  position: absolute!important;
+  bottom: 35px!important;
+  width: 100%!important;
+  .owl-dot{
+    &.active{
+      span{
+        background-color: #D6D6D6!important;
+      }
+
+    }
+    span{
+      background-color: transparent!important;
+      border: 1px solid #D6D6D6!important;
+
+    }
+  }
+}
+  .item{
+    height:43.75rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 2.0625rem;
+    h1{
+      margin:0rem 0rem 1.25rem;
+      text-align: center;
+      @include font($Main-Font, 3.75rem, 500,$Dark );
+      line-height: 4.4375rem;
+      text-transform: uppercase;
+    }
+    h2{
+      margin: 0px;
+      text-align: center;
+      @include font($Main-Font, 2.5rem, 400,$Dark );
+      line-height: 2.9375rem;
+      text-transform: uppercase;
+    }
+  }
+
+}

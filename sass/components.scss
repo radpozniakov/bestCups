@@ -1,7 +1,7 @@
 .container{
     max-width: 90rem;
     margin: 0 auto;
-  padding: 3rem 3rem;
+    padding: 3rem 3rem;
 }
 .color-list{
   display: flex;
@@ -131,5 +131,172 @@ a.more,input.more{
       text-transform: uppercase;
     }
   }
+
+}
+
+//=============  BREAD CRUMBS ================//
+.breadCrumbs{
+  background-color: $Blue-active;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 0;
+  @include el('title'){
+    @include font($Main-Font, 2rem, 300, white );
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    margin: 0;
+  }
+  @include el('pathList'){
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  @include el('listItem'){
+    @include font($Main-Font, 1rem, 300, lighten($Gray, 30%));
+    letter-spacing: 0.05rem;
+    display: inline-block;
+    padding: 0 0.8rem;
+    &:last-child{
+      color: white;
+      &::after{
+        display: none;
+      }
+    }
+    &:last-child{
+      &::after{
+        display: none;
+      }
+    }
+    &::after{
+      content: "/";
+      position: relative;
+      left: 0.8rem;
+      color: lighten($Gray, 40%);
+    }
+  }
+  @include el('listHref'){
+    @include font($Main-Font, 1rem, 300, lighten($Gray, 40%));
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    &:hover{
+      color: $Dark;
+    }
+  }
+}
+
+//=============  SHOP MENU ================//
+.shopMenu{
+  text-align: center;
+  box-shadow: 0 1px 2px 1px rgba(1, 0, 1, 0.16);
+  @include el('list'){
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0rem 3rem;
+    list-style: none;
+  }
+  @include el('listItem'){
+    display: inline-block;
+  }
+  @include el('listItemHref'){
+    @include font($Main-Font, 1.125rem, 400, $Dark);
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    &:hover{
+      color: $Blue-active;
+    }
+    @include mod('activeLink'){
+      color: $Blue-active;
+    }
+  }
+}
+
+
+//=============  PRODUCT ================//
+.productsGrid{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .product{
+    margin-bottom: 3rem;
+  }
+}
+
+.product{
+  position: relative;
+  padding: 0rem 0rem 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 18.75rem;
+  box-shadow: 0 1px 2px 1px rgba(1, 0, 1, 0.16);
+  &:hover{
+    box-shadow: 0 1px 3px 3px rgba(1, 0, 1, 0.16);
+  }
+  @include el('imageBlock'){
+    width: 100%;
+    height: 15rem;
+    background-size: cover;
+  }
+  @include el('title'){
+    text-align: center;
+  }
+  @include el('titleHref'){
+    @include font($Main-Font, 1.125rem, 400, $Dark);
+    text-decoration: none;
+    &:hover{
+      color: $Blue-active;
+    }
+  }
+  @include el('metaInfo'){
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin-bottom:2rem;
+  }
+  @include el('metaInfoItem'){
+    display: inline-block;
+    background-color: $Blue-light;
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    margin: 0.4rem .2rem;
+    @include font($Main-Font, 0.85rem, 300, $Dark);
+  }
+
+  @include el('button'){
+    background: none;
+    border: none;
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
+    outline: none;
+    &:hover{
+      :last-child{
+        background-color: darken($Blue-active, 10%);
+      }
+    }
+  }
+  @include el('buttonIcon'){
+    background-color: $Blue-active;
+    padding: 0.7rem 1rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    @include font($Main-Font, 1rem, 300, white);
+    svg{
+      position: relative;
+      top: 0.06rem;
+      left: 0.3rem;
+      margin-right: 0.6rem;
+    }
+  }
+  @include el('buttonPrice'){
+    background-color: $Blue-light;
+    padding: 0.7rem 1rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    @include font($Main-Font, 1rem, 400, $Dark);
+  }
+
 
 }

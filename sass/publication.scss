@@ -1,0 +1,54 @@
+.publicationGrid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .publication{
+    margin-bottom: 2rem;
+  }
+}
+
+.publication{
+  width: 48%;
+  @include el('thumbnail'){
+    width: 100%;
+    height: 19rem;
+    background-size: cover;
+  }
+  @include el('meta'){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  @include el('title'){
+    @include font($Main-Font, 1.25rem, 500, $Dark);
+    width: 75%;
+    line-height: 1.7rem;
+    margin-bottom:0;
+  }
+  @include el('titleHref'){
+    text-decoration: none;
+    color: $Dark;
+    &:hover{
+      color: $Blue-active;
+    }
+  }
+  @include el('date'){
+    @include font($Main-Font, 1rem, 300, lighten($Gray, 20%));
+    text-align: right;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  @include el('dateIcon'){
+    position: relative;
+    top: 0.125rem;
+    padding-right:0.3rem;
+    g{
+      fill: #a7a7a7;
+    }
+  }
+  @include el('description'){
+    @include font($Main-Font, 1rem, 400, $Dark);
+    line-height: 1.6rem;
+  }
+
+}

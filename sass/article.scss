@@ -1,0 +1,26 @@
+.articleBlog{
+  @include el('image'){
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0,0,0,.3);
+  }
+  @include el('title'){
+    @include font($Main-Font, 3rem, 300, white);
+    text-align: center;
+  }
+  @include el('date'){
+    @include font($Main-Font, 1.1rem, 300, white);
+    display:block;
+    text-align: center;
+  }
+  @include el('content'){
+   @include font($Main-Font, 1rem, 400, $Dark);
+    line-height: 1.5rem;
+    max-width: 64rem;
+    h1,h2,h3,h4,h5,h6{
+      line-height: 2rem;
+    }
+  }
+}

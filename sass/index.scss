@@ -106,45 +106,9 @@ h2.title-section {
 
 
 }
+
 .postsSection{
   background-color: #F6F6F6;
-}
-.public-list{
-  max-width:64.0625rem ;
-  margin: 0rem auto 3.375rem;
-  &__wrapper{
-
-    display: flex;
-    justify-content: space-between;
-  }
-}
-.public-list-item{
-  width:47.8%;
-  &__logo{
-    height:15.6875rem;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  &__text{
-    margin: 0px;
-    line-height: 1.625rem;
-    @include font($Main-Font, 1.125rem, 400, $Dark );
-  }
-  &__title{
-    margin:1.25rem 0rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__name{
-    margin:0px;
-    @include font($Main-Font, 1.25rem, 500, $Dark );
-  }
-  &__date{
-    @include font($Main-Font, 0.875rem, 400, $Dark );
-  }
-
 }
 
 

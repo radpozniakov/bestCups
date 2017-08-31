@@ -1,0 +1,9 @@
+@include breakpoint(max-width 1140px){
+  .productsGrid{
+    justify-content: center;
+    .product{
+      margin: 0rem 0.8rem;
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -5,7 +5,13 @@
 @import 'footer';
 @import 'components';
 @import 'index';
+@import 'product';
+@import "publication";
+@import "article";
 //////////////////////////////////// RESPONSE FILES ///////////////////////////////////////////
-@import "./response/res-header";
-@import "./response/res-components";
-@import "./response/res-footer";
+@import "response/res-header";
+@import "response/res-components";
+@import "response/res-footer";
+@import "response/res-product";
+@import "response/res-publication";
+@import "response/res-article";

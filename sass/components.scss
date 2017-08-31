@@ -2,6 +2,9 @@
     max-width: 90rem;
     margin: 0 auto;
     padding: 3rem 3rem;
+    @include mod('wide'){
+      max-width: 100%;
+    }
 }
 .color-list{
   display: flex;
@@ -213,90 +216,3 @@ a.more,input.more{
   }
 }
 
-
-//=============  PRODUCT ================//
-.productsGrid{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  .product{
-    margin-bottom: 3rem;
-  }
-}
-
-.product{
-  position: relative;
-  padding: 0rem 0rem 1.5rem;
-  border-radius: 1rem;
-  overflow: hidden;
-  max-width: 18.75rem;
-  box-shadow: 0 1px 2px 1px rgba(1, 0, 1, 0.16);
-  &:hover{
-    box-shadow: 0 1px 3px 3px rgba(1, 0, 1, 0.16);
-  }
-  @include el('imageBlock'){
-    width: 100%;
-    height: 15rem;
-    background-size: cover;
-  }
-  @include el('title'){
-    text-align: center;
-  }
-  @include el('titleHref'){
-    @include font($Main-Font, 1.125rem, 400, $Dark);
-    text-decoration: none;
-    &:hover{
-      color: $Blue-active;
-    }
-  }
-  @include el('metaInfo'){
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin-bottom:2rem;
-  }
-  @include el('metaInfoItem'){
-    display: inline-block;
-    background-color: $Blue-light;
-    padding: 0.5rem 1rem;
-    border-radius: 1.25rem;
-    margin: 0.4rem .2rem;
-    @include font($Main-Font, 0.85rem, 300, $Dark);
-  }
-
-  @include el('button'){
-    background: none;
-    border: none;
-    display: flex;
-    margin: 0 auto;
-    cursor: pointer;
-    outline: none;
-    &:hover{
-      :last-child{
-        background-color: darken($Blue-active, 10%);
-      }
-    }
-  }
-  @include el('buttonIcon'){
-    background-color: $Blue-active;
-    padding: 0.7rem 1rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    @include font($Main-Font, 1rem, 300, white);
-    svg{
-      position: relative;
-      top: 0.06rem;
-      left: 0.3rem;
-      margin-right: 0.6rem;
-    }
-  }
-  @include el('buttonPrice'){
-    background-color: $Blue-light;
-    padding: 0.7rem 1rem;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    @include font($Main-Font, 1rem, 400, $Dark);
-  }
-
-
-}

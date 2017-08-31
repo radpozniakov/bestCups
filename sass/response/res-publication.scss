@@ -1,0 +1,34 @@
+@include breakpoint(max-width 1150px){
+  .publicationGrid{
+
+  }
+  .publication{
+    @include el('title'){
+      width: 100%;
+    }
+    @include el('meta'){
+      flex-direction: column-reverse;
+    }
+    @include el('date'){
+      text-align: left;
+    }
+  }
+}
+@include breakpoint(max-width 890px){
+  .publicationGrid{
+
+  }
+  .publication{
+    @include el('thumbnail'){
+      height: 10rem;
+    }
+  }
+}
+@include breakpoint(max-width 735px){
+  .publication{
+    width: 100%;
+    @include el('thumbnail'){
+      height: 15rem;
+    }
+  }
+}

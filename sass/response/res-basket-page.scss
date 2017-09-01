@@ -1,0 +1,37 @@
+@include breakpoint(max-width 768px){
+  .table-wrapper{
+    overflow: hidden;
+    overflow-x: scroll;
+    .basketTable{
+      width: 45rem;
+    }
+  }
+
+  .orderBy-wrapper{
+    flex-direction: column-reverse;
+    .borderedSection{
+      width: 100%;
+      &:first-child{
+        width: 100%;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+
+@include breakpoint(max-width 400px){
+  .priceOrder{
+    @include el('text'){
+      font-size:1rem;
+    }
+    @include el('finalNumber'){
+      margin-left:1rem;
+      font-size: 1.2rem;
+      background-color: $Blue-light;
+      padding: 0.5rem 0.5rem;
+      border-radius: 2rem;
+    }
+  }
+}
+

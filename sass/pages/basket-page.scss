@@ -1,0 +1,85 @@
+
+.basketTable{
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  @include font($Main-Font, 1rem, 400, $Dark);
+  @include el('head'){
+  }
+  @include el('headRowItem'){
+    padding: 1rem 1rem 2rem;
+    font-weight:500;
+  }
+  @include el('bodyRow'){
+    &:last-child{
+      border-bottom: solid 1px lighten($Gray, 40%);
+    }
+  }
+  @include el('bodyRowItem'){
+   padding: 1rem 0;
+    border-top: solid 1px lighten($Gray, 40%);
+    @include mod('title'){
+      text-align: left;
+      line-height: 1.5rem;
+      width: 25%;
+    }
+  }
+  @include el('bodyRowItemTitle'){
+    text-decoration: none;
+    color: $Dark;
+    &:hover{
+      color: $Blue-active;
+    }
+  }
+  @include el('bodyRowItemImg'){
+   width: 6rem;
+   height: 6rem;
+    border-radius: 50%;
+  }
+  @include el('bodyRowItemButton'){
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    background-color: white;
+    border: solid 1px $Blue-active;
+    border-radius: 0.5rem;
+    color: $Blue-active;
+    margin: 0 1rem;
+    cursor: pointer;
+    &:hover{
+      background-color: $Blue-active;
+      color: white;
+    }
+  }
+}
+
+.priceOrder{
+  padding: 2rem 0;
+  text-align: right;
+  @include font($Main-Font, 1.2rem, 400, $Dark);
+  letter-spacing: 0.06rem;
+  @include el('finalNumber'){
+    margin-left:1rem;
+    font-size: 1.5rem;
+    font-weight:300;
+    background-color: $Blue-light;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+  }
+}
+
+
+.orderBy-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .borderedSection{
+    width: 40%;
+    &:first-child{
+      width: 55%;
+    }
+  }
+}

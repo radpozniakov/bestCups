@@ -39,4 +39,27 @@
 
 }
 
+@include breakpoint(max-width 400px){
+  .borderedSection{
+    @include el('title'){
+      font-size:1.2rem;
+      top: -2rem;
+    }
+  }
+}
+
+
+
+@include breakpoint(max-width 320px){
+  .borderedSection{
+    @include el('title'){
+      font-size:1.2rem;
+      top: -2rem;
+      left: 0;
+      padding-left: 0rem;
+    }
+  }
+}
+
+
 

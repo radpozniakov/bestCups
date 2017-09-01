@@ -1,0 +1,9 @@
+@include breakpoint(max-width 890px){
+  .contacts-wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    .form-main-opt,.contactsInfo{
+      width: 100%;
+    }
+  }
+}

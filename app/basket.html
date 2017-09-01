@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Контакты</title>
+    <title>Корзина</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
@@ -181,85 +181,112 @@
         </g>
     </svg>
 </div>
+
 <div class="breadCrumbs">
-    <h1 class="breadCrumbs__title">Контакты</h1>
+    <h1 class="breadCrumbs__title">Корзина</h1>
     <ul class="breadCrumbs__pathList">
         <li class="breadCrumbs__listItem"><a class="breadCrumbs__listHref" href="#">Главная</a></li>
-        <li class="breadCrumbs__listItem">контакты</li>
+        <li class="breadCrumbs__listItem">корзина</li>
+    </ul>
+</div>
+<div class="shopMenu">
+    <ul class="shopMenu__list">
+        <li class="shopMenu__listItem"><a class="shopMenu__listItemHref" href="">Мой профиль</a></li>
+        <li class="shopMenu__listItem"><a class="shopMenu__listItemHref" href="">История покупок</a></li>
+        <li class="shopMenu__listItem"><a class="shopMenu__listItemHref shopMenu__listItemHref--activeLink" href="">Корзина</a></li>
     </ul>
 </div>
 
+<main class="container">
+    <div class="table-wrapper">
+        <table class="basketTable">
+            <thead class="basketTable__head">
+            <tr class="basketTable__headRow">
+                <th class="basketTable__headRowItem">№</th>
+                <th class="basketTable__headRowItem">Изображение</th>
+                <th class="basketTable__headRowItem">Название товара</th>
+                <th class="basketTable__headRowItem">Количество</th>
+                <th class="basketTable__headRowItem">Цена</th>
+                <th class="basketTable__headRowItem">Стоимость</th>
+            </tr>
+            </thead>
 
-<main class="container contacts-wrapper">
-
-        <form action="" class="form-main-opt">
-            <div class="input-group">
-                <label for="name">Имя*</label>
-                <input type="text" id="name">
-            </div>
-            <div class="input-group">
-                <label for="email">E-mail*</label>
-                <input id='email' type="text" value="example@gmail.com">
-            </div>
-            <div class="input-group">
-                <label for="thema">Тема</label>
-                <input type="text" id="thema">
-            </div>
-            <div class="input-group">
-                <label for="text_area">Текст сообщения*</label>
-                <textarea name="text_area" id="text_area" cols="30" rows="5"></textarea>
-            </div>
-            <input type="submit" class="more more_button_form" value="Отправить">
-        </form>
-
-    <div class="contactsInfo">
-        <div class="contactsInfo__item">
-            <h3 class="contactsInfo__title">Информация</h3>
-            <p class="contactsInfo__description">
-                Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Товарищи! сложившаяся структура организации позволяет оценить значение новых предложений.
-            </p>
-        </div>
-        <div class="contactsInfo__item">
-            <h3 class="contactsInfo__title">Контакты</h3>
-            <ul class="contactsInfo__list">
-                <li class="contactsInfo__listItem">
-                    <svg class="contactsInfo__listItemIcon"viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g stroke="none" stroke-width="1" fill-rule="evenodd">
-                        <g  transform="translate(-1342.000000, -647.000000)">
-                            <path d="M1357.68,650.68 L1357.68,649 L1351,653.18 L1344.32,649 L1344.32,650.68 L1351,654.82 L1357.68,650.68 Z M1357.68,647.32 C1358.13334,647.32 1358.52,647.486665 1358.84,647.82 C1359.16,648.153335 1359.32,648.546664 1359.32,649 L1359.32,659 C1359.32,659.453336 1359.16,659.846665 1358.84,660.18 C1358.52,660.513335 1358.13334,660.68 1357.68,660.68 L1344.32,660.68 C1343.86666,660.68 1343.48,660.513335 1343.16,660.18 C1342.84,659.846665 1342.68,659.453336 1342.68,659 L1342.68,649 C1342.68,648.546664 1342.84,648.153335 1343.16,647.82 C1343.48,647.486665 1343.86666,647.32 1344.32,647.32 L1357.68,647.32 Z"></path>
-                        </g>
-                    </g>
-                </svg>best-cups@info.com.ua</li>
-                <li class="contactsInfo__listItem">
-                    <svg class="contactsInfo__listItemIcon" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g stroke="none" stroke-width="1"  fill-rule="evenodd">
-                        <g transform="translate(-1371.000000, -677.000000)">
-                            <path d="M1374.5,683.98 C1375.11334,685.153339 1375.89333,686.213329 1376.84,687.16 C1377.78667,688.106671 1378.84666,688.886664 1380.02,689.5 L1381.86,687.66 C1381.96667,687.539999 1382.1,687.46 1382.26,687.42 C1382.42,687.38 1382.57333,687.393333 1382.72,687.46 C1383.6,687.766668 1384.58666,687.92 1385.68,687.92 C1385.90667,687.92 1386.1,687.999999 1386.26,688.16 C1386.42,688.320001 1386.5,688.513332 1386.5,688.74 L1386.5,691.68 C1386.5,691.906668 1386.42,692.099999 1386.26,692.26 C1386.1,692.420001 1385.90667,692.5 1385.68,692.5 C1383.75999,692.5 1381.92001,692.12667 1380.16,691.38 C1378.46666,690.659996 1376.96667,689.646673 1375.66,688.34 C1374.35333,687.033327 1373.34,685.533342 1372.62,683.84 C1371.87333,682.079991 1371.5,680.24001 1371.5,678.32 C1371.5,678.093332 1371.58,677.900001 1371.74,677.74 C1371.9,677.579999 1372.09333,677.5 1372.32,677.5 L1375.26,677.5 C1375.48667,677.5 1375.68,677.579999 1375.84,677.74 C1376,677.900001 1376.08,678.093332 1376.08,678.32 C1376.08,679.413339 1376.23333,680.399996 1376.54,681.28 C1376.58,681.426667 1376.58667,681.579999 1376.56,681.74 C1376.53333,681.900001 1376.46,682.033333 1376.34,682.14 L1374.5,683.98 Z"></path>
-                        </g>
-                    </g>
-                </svg>+38(097)7762565</li>
-                <li class="contactsInfo__listItem"><svg class="contactsInfo__listItemIcon" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g stroke="none" stroke-width="1" fill-rule="evenodd">
-                        <g transform="translate(-1371.000000, -677.000000)">
-                            <path d="M1374.5,683.98 C1375.11334,685.153339 1375.89333,686.213329 1376.84,687.16 C1377.78667,688.106671 1378.84666,688.886664 1380.02,689.5 L1381.86,687.66 C1381.96667,687.539999 1382.1,687.46 1382.26,687.42 C1382.42,687.38 1382.57333,687.393333 1382.72,687.46 C1383.6,687.766668 1384.58666,687.92 1385.68,687.92 C1385.90667,687.92 1386.1,687.999999 1386.26,688.16 C1386.42,688.320001 1386.5,688.513332 1386.5,688.74 L1386.5,691.68 C1386.5,691.906668 1386.42,692.099999 1386.26,692.26 C1386.1,692.420001 1385.90667,692.5 1385.68,692.5 C1383.75999,692.5 1381.92001,692.12667 1380.16,691.38 C1378.46666,690.659996 1376.96667,689.646673 1375.66,688.34 C1374.35333,687.033327 1373.34,685.533342 1372.62,683.84 C1371.87333,682.079991 1371.5,680.24001 1371.5,678.32 C1371.5,678.093332 1371.58,677.900001 1371.74,677.74 C1371.9,677.579999 1372.09333,677.5 1372.32,677.5 L1375.26,677.5 C1375.48667,677.5 1375.68,677.579999 1375.84,677.74 C1376,677.900001 1376.08,678.093332 1376.08,678.32 C1376.08,679.413339 1376.23333,680.399996 1376.54,681.28 C1376.58,681.426667 1376.58667,681.579999 1376.56,681.74 C1376.53333,681.900001 1376.46,682.033333 1376.34,682.14 L1374.5,683.98 Z"></path>
-                        </g>
-                    </g>
-                </svg>+38(097)7762565</li>
-            </ul>
-        </div>
-        <div class="contactsInfo__item">
-            <h3 class="contactsInfo__title">Мы находимся</h3>
-            <ul class="contactsInfo__list">
-                <li class="contactsInfo__listItem">Днепр, Украина</li>
-                <li class="contactsInfo__listItem">пр.Гагарина 49а</li>
-                <li class="contactsInfo__listItem">49000</li>
-            </ul>
-        </div>
+            <tbody class="basketTable__body">
+            <tr class="basketTable__bodyRow">
+                <td class="basketTable__bodyRowItem">1</td>
+                <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/2.png" alt=""></a></td>
+                <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">In Condimentum Facilisis Porta. Sed</a></td>
+                <td class="basketTable__bodyRowItem"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--plus">+</div><span class="basketTable__bodyRowItemCounter">2</span><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--minus">-</div></td>
+                <td class="basketTable__bodyRowItem"><span>11грн</span></td>
+                <td class="basketTable__bodyRowItem"><span>22грн</span></td>
+            </tr>
+            <tr class="basketTable__bodyRow">
+                <td class="basketTable__bodyRowItem">2</td>
+                <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/3.png" alt=""></a></td>
+                <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">Vestibulum Ante Ipsum Vestibulum Ante Ipsum</a></td>
+                <td class="basketTable__bodyRowItem"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--plus">+</div><span class="basketTable__bodyRowItemCounter">2</span><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--minus">-</div></td>
+                <td class="basketTable__bodyRowItem"><span>11грн</span></td>
+                <td class="basketTable__bodyRowItem"><span>22грн</span></td>
+            </tr>
+            <tr class="basketTable__bodyRow">
+                <td class="basketTable__bodyRowItem">3</td>
+                <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/2.png" alt=""></a></td>
+                <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">In Condimentum Facilisis Porta. Sed</a></td>
+                <td class="basketTable__bodyRowItem"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--plus">+</div><span class="basketTable__bodyRowItemCounter">2</span><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--minus">-</div></td>
+                <td class="basketTable__bodyRowItem"><span>11грн</span></td>
+                <td class="basketTable__bodyRowItem"><span>22грн</span></td>
+            </tr>
+            <tr class="basketTable__bodyRow">
+                <td class="basketTable__bodyRowItem">4</td>
+                <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/3.png" alt=""></a></td>
+                <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">Vestibulum Ante Ipsum</a></td>
+                <td class="basketTable__bodyRowItem"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--plus">+</div><span class="basketTable__bodyRowItemCounter">2</span><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--minus">-</div></td>
+                <td class="basketTable__bodyRowItem"><span>11грн</span></td>
+                <td class="basketTable__bodyRowItem"><span>22грн</span></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
+    <div class="priceOrder">
+        <p class="priceOrder__text">Всего к оплате:<span class="priceOrder__finalNumber">1800грн</span></p>
+    </div>
+
+    <div class="orderBy-wrapper">
+
+        <div class="borderedSection borderedSection--form">
+            <h3 class="borderedSection__title">Оформление заказа</h3>
+            <form action="" class="form-main-opt">
+                <div class="input-group">
+                    <label for="name">Имя*</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="input-group">
+                    <label for="email">E-mail*</label>
+                    <input id='email' type="text" value="example@gmail.com">
+                </div>
+                <div class="input-group">
+                    <label for="thema">Тема</label>
+                    <input type="text" id="thema">
+                </div>
+                <div class="input-group">
+                    <label for="text_area">Текст сообщения*</label>
+                    <textarea name="text_area" id="text_area" cols="30" rows="5"></textarea>
+                </div>
+                <input type="submit" class="more more_button_form" value="Оформить заказ">
+            </form>
+        </div>
+
+        <div class="borderedSection borderedSection--form">
+            <h3 class="borderedSection__title">Информация</h3>
+            <p class="borderedSection__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque deserunt ex incidunt inventore nostrum quisquam sequi! Alias animi consequatur cupiditate dolore, dolorem dolores doloribus eos est eveniet exercitationem id ipsa iste laboriosam molestiae natus nisi perferendis possimus provident quae quas quia recusandae rerum sint suscipit tempora veritatis vitae! Nobis!
+            </p>
+        </div>
+
+    </div>
 
 </main>
-
 
 <footer class="mainFooter">
     <div class="topFooter-wrapper">

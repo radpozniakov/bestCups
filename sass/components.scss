@@ -216,3 +216,26 @@ a.more,input.more{
   }
 }
 
+
+//=============== BORDERED SECTION ===========//
+
+.borderedSection{
+  @include font($Main-Font, 1rem, 300, $Dark);
+  border-top: solid 1px lighten($Gray, 40%);
+  @include el('title'){
+    font-size: 1.5rem;
+    position: relative;
+    left: 2rem;
+    top: -2.5rem;
+    display: inline-block;
+    background-color: white;
+    padding: 0 2rem;
+    font-weight:400;
+    margin-bottom: -1rem;
+  }
+  @include el('text'){
+    line-height: 1.5rem;
+    font-weight:400;
+    margin-top:0;
+  }
+}

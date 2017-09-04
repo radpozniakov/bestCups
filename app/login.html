@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/select2.min.css">
-
 </head>
 <body>
 <header class="header">
@@ -185,125 +183,38 @@
 </div>
 
 <div class="breadCrumbs">
-    <h1 class="breadCrumbs__title">Корзина</h1>
+    <h1 class="breadCrumbs__title">Логин</h1>
     <ul class="breadCrumbs__pathList">
         <li class="breadCrumbs__listItem"><a class="breadCrumbs__listHref" href="#">Главная</a></li>
-        <li class="breadCrumbs__listItem">корзина</li>
+        <li class="breadCrumbs__listItem">логин</li>
     </ul>
 </div>
 <div class="shopMenu">
     <ul class="shopMenu__list">
-        <li class="shopMenu__listItem"><a class="shopMenu__listItemHref" href="">Мой профиль</a></li>
-        <li class="shopMenu__listItem"><a class="shopMenu__listItemHref" href="">История покупок</a></li>
-        <li class="shopMenu__listItem"><a class="shopMenu__listItemHref shopMenu__listItemHref--activeLink" href="">Корзина</a></li>
+        <li class="shopMenu__listItem"><a class="shopMenu__listItemHref shopMenu__listItemHref--activeLink" href="">Логин</a></li>
+        <li class="shopMenu__listItem"><a class="shopMenu__listItemHref" href="">Регистрация</a></li>
     </ul>
 </div>
 
 <main class="container">
-    <div class="table-wrapper">
-        <table class="basketTable">
-            <thead class="basketTable__head">
-            <tr class="basketTable__headRow">
-                <th class="basketTable__headRowItem">№</th>
-                <th class="basketTable__headRowItem">Изображение</th>
-                <th class="basketTable__headRowItem">Название товара</th>
-                <th class="basketTable__headRowItem">Количество</th>
-                <th class="basketTable__headRowItem">Цена</th>
-                <th class="basketTable__headRowItem">Стоимость</th>
-            </tr>
-            </thead>
-
-            <tbody class="basketTable__body">
-            <tr class="basketTable__bodyRow">
-                <td class="basketTable__bodyRowItem">1</td>
-                <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/2.png" alt=""></a></td>
-                <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">In Condimentum Facilisis Porta. Sed</a></td>
-                <td class="basketTable__bodyRowItem"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--plus">+</div><span class="basketTable__bodyRowItemCounter">2</span><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--minus">-</div></td>
-                <td class="basketTable__bodyRowItem"><span>11грн</span></td>
-                <td class="basketTable__bodyRowItem"><span>22грн</span></td>
-            </tr>
-            <tr class="basketTable__bodyRow">
-                <td class="basketTable__bodyRowItem">2</td>
-                <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/3.png" alt=""></a></td>
-                <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">Vestibulum Ante Ipsum Vestibulum Ante Ipsum</a></td>
-                <td class="basketTable__bodyRowItem"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--plus">+</div><span class="basketTable__bodyRowItemCounter">2</span><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--minus">-</div></td>
-                <td class="basketTable__bodyRowItem"><span>11грн</span></td>
-                <td class="basketTable__bodyRowItem"><span>22грн</span></td>
-            </tr>
-            <tr class="basketTable__bodyRow">
-                <td class="basketTable__bodyRowItem">3</td>
-                <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/2.png" alt=""></a></td>
-                <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">In Condimentum Facilisis Porta. Sed</a></td>
-                <td class="basketTable__bodyRowItem"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--plus">+</div><span class="basketTable__bodyRowItemCounter">2</span><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--minus">-</div></td>
-                <td class="basketTable__bodyRowItem"><span>11грн</span></td>
-                <td class="basketTable__bodyRowItem"><span>22грн</span></td>
-            </tr>
-            <tr class="basketTable__bodyRow">
-                <td class="basketTable__bodyRowItem">4</td>
-                <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/3.png" alt=""></a></td>
-                <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">Vestibulum Ante Ipsum</a></td>
-                <td class="basketTable__bodyRowItem"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--plus">+</div><span class="basketTable__bodyRowItemCounter">2</span><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--minus">-</div></td>
-                <td class="basketTable__bodyRowItem"><span>11грн</span></td>
-                <td class="basketTable__bodyRowItem"><span>22грн</span></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="priceOrder">
-        <p class="priceOrder__text">Всего к оплате:<span class="priceOrder__finalNumber">1800грн</span></p>
-    </div>
-
-    <div class="orderBy-wrapper">
-
-        <div class="borderedSection borderedSection--form">
-            <h3 class="borderedSection__title">Оформление заказа</h3>
+    <section class="registrationForm">
+        <div class="registrationForm__wrapper">
             <form action="" class="formPreview">
-                <div class="formPreview__wrapper">
-                    <div class="formPreview__bigGroup">
-                        <div class="formPreview__group">
-                            <label for="name" class="formPreview__label">Имя*</label>
-                            <input type="text" id="name" class="formPreview__input">
-                        </div>
-                        <div class="formPreview__group">
-                            <label for="phone" class="formPreview__label">Телефон*</label>
-                            <input id='phone' type="tel" value="" class="formPreview__input">
-                        </div>
-                    </div>
-                    <div class="formPreview__group">
-                        <label for="thema-select" class="formPreview__label">Тема</label>
-                        <select name="thema-select" id="thema-select">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                    <div class="formPreview__bigGroup">
-                        <div class="formPreview__group">
-                            <label for="city" class="formPreview__label">Город доставки*</label>
-                            <input type="text" id="city" class="formPreview__input">
-                        </div>
-                        <div class="formPreview__group">
-                            <label for="email" class="formPreview__label">E-mail*</label>
-                            <input id='email' type="text" value="example@gmail.com" class="formPreview__input">
-                        </div>
-                    </div>
-                    <input type="submit" class="more more_button_form" value="Оформить заказ">
+                <h2 class="formPreview__title">Логин</h2>
+                <div class="formPreview__group">
+                    <label for="nameInput" class="formPreview__label">Имя*</label>
+                    <input id='nameInput' type="tel" value="" class="formPreview__input">
                 </div>
+
+                <div class="formPreview__group">
+                    <label for="password1Input" class="formPreview__label">Пароль*</label>
+                    <input id='password1Input' type="password" value="" class="formPreview__input">
+                </div>
+
+                <input type="submit" class="more  more_button_login" value="Войти">
             </form>
         </div>
-
-        <div class="borderedSection borderedSection--form">
-            <h3 class="borderedSection__title">Информация</h3>
-            <p class="borderedSection__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque deserunt ex incidunt inventore nostrum quisquam sequi! Alias animi consequatur cupiditate dolore, dolorem dolores doloribus eos est eveniet exercitationem id ipsa iste laboriosam molestiae natus nisi perferendis possimus provident quae quas quia recusandae rerum sint suscipit tempora veritatis vitae! Nobis!
-            </p>
-        </div>
-
-    </div>
-
+    </section>
 </main>
 
 <footer class="mainFooter">
@@ -410,12 +321,6 @@
     </div>
 </footer>
 <script src="js/plugins/jquery-3.2.1.min.js"></script>
-<script src="js/plugins/select2.min.js"></script>
 <script src="js/header.js"></script>
-<script>
-    $('select').select2({
-        minimumResultsForSearch: Infinity
-    });
-</script>
 </body>
 </html>

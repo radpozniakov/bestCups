@@ -6,21 +6,21 @@
 h2.title-section {
   @include font($Main-Font, 1.75rem, 400, $Dark );
   text-align: center;
-  margin: 0px 0px 5rem;
+  padding: 0 2rem;
+  margin: 0px 0px 1.25rem;
   position: relative;
-  &.title-section_section_product-index{
-    &:after{
-      content: '';
-      position: absolute;
-      width:5.8125rem;
-      height:1px;
-      background-color: #D6D6D6;
-      bottom:-1.125rem;
-      left:47%;
-    }
+  & + hr{
+    margin: 0px auto 3.75rem;
+    width:5.8125rem;
+    border: none;
+    border-top: 1px solid $Gray;
   }
 }
+
 .production-list{
+  &.close{
+    display: none;
+  }
   max-width: 47.1875rem;
   display: flex;
   justify-content: space-between;
@@ -28,7 +28,8 @@ h2.title-section {
 }
 .production-item{
   width:8.75rem;
-  &:hover{
+  &:hover,&.active{
+    cursor: pointer;
     .production-item__title{
       color: $Blue-active;
     }
@@ -60,6 +61,12 @@ h2.title-section {
   }
 }
 .production-info{
+  &.production-info_block_coffee,&.production-info_block_cups,&.production-info_block_accessories{
+    display: none;
+    &.active{
+      display: flex;
+    }
+  }
   display: flex;
   justify-content: space-between;
   width:100%;
@@ -78,21 +85,23 @@ h2.title-section {
 }
 .production_content{
   position: relative;
+  border-top:1px solid #D6D6D6;
   &__text{
-    padding: 2.25rem 0rem 0rem;
-    border-top:1px solid #D6D6D6;
+
+
     @include font($Main-Font, 1rem, 400, $Dark );
     line-height: 1.5625rem;
     margin: 0px 0px 1.25rem;
   }
   &__title{
-    position: absolute;
+    position: relative;
     display: flex;
     width:15.625rem;
     background-color: white;
     justify-content: center;
     align-items: center;
-    top:-1.1875rem;
+    padding-left: 0.5rem;
+    top: -1.1875rem;
     left:2.75rem;
     @include font($Main-Font, 1.75rem, 400, $Dark );
     span{
@@ -116,7 +125,7 @@ h2.title-section {
   background-color: white;
 }
 .feedback-list{
-  width:57rem;
+  max-width:57rem;
   margin:0px auto;
 
   &__wrapper{
@@ -126,6 +135,7 @@ h2.title-section {
 }
 .feedback_item{
   width:29.93421053%;
+  min-width: 17.0625rem;
   position: relative;
   box-shadow: 0px 0px 1px 0px rgba(0,0,0,.5);
   &:hover{
@@ -172,33 +182,7 @@ h2.title-section {
     width:45%;
   }
 }
-.form-main-opt{
-  *{
-    margin: 0px;
-  }
-  .input-group{
-    margin:0rem 0rem 1.21875rem;
-    display: flex;
-    flex-direction: column;
-    label{
-      margin-bottom: 0.625rem;
-      @include font($Main-Font, 1rem, 400,$Dark );
-    }
-    input[type='text'],textarea{
-      background-color: #F5F5F5;
-      resize: none;
-      border:1px solid #D8D8D8;
-      padding: 0.5rem 1rem;
-      border-radius: 0.25rem;
-      line-height: 1.625rem;
-      outline: none;
-      @include font($Main-Font, 0.875rem, 400,$Dark );
-      &:active,&:hover,&:focus{
-        border-color: #4587C8;
-      }
-    }
-  }
-}
+
 .wholesaleBuyersSection{
   background-color:#F6F6F6;
 

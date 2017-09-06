@@ -233,9 +233,18 @@ a.more,input.more{
     font-weight:400;
     margin-bottom: -1rem;
   }
+
   @include el('text'){
     line-height: 1.5rem;
     font-weight:400;
     margin-top:0;
+  }
+  @include el('productsList'){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .product{
+
+    }
   }
 }

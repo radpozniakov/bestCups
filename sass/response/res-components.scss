@@ -61,5 +61,59 @@
   }
 }
 
+.color-list{
+  @include breakpoint(max-width 1024px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.color-item{
+  @include breakpoint(max-width 1024px) {
+    margin: 0px 1rem 1rem;
+  }
+}
+.tag-list{
+  @include breakpoint(max-width 1024px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    @include breakpoint(max-width 600px) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+.tag-item{
 
+    @include breakpoint(max-width 600px) {
+      margin-bottom: 1rem;
+    }
 
+}
+.introSection{
+  .item{
+    @include breakpoint(max-width 800px) {
+      height:31.25rem;
+      padding-top: 2.0625rem;
+      h1{
+
+        font-size:2.5rem;
+        margin-bottom: 0rem;
+      }
+      h2{
+        font-size:2rem;
+      }
+      @include breakpoint(max-width 600px) {
+        height:25rem;
+        h1{
+
+          font-size:1.5rem;
+          margin-bottom: 0rem;
+          line-height: 3.5rem;
+        }
+        h2{
+          font-size:1rem;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+}

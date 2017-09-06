@@ -10,6 +10,8 @@
 @import "article";
 @import "pages/contacts-page";
 @import "pages/basket-page";
+@import "pages/login";
+@import "pages/registration";
 //////////////////////////////////// RESPONSE FILES ///////////////////////////////////////////
 @import "response/res-header";
 @import "response/res-components";
@@ -19,3 +21,4 @@
 @import "response/res-article";
 @import "response/res-coontacts-page";
 @import "response/res-basket-page";
+@import "response/res-index-page";

@@ -192,25 +192,27 @@
 
 <main class="container contacts-wrapper">
 
-        <form action="" class="form-main-opt">
-            <div class="input-group">
-                <label for="name">Имя*</label>
-                <input type="text" id="name">
+    <form action="" class="formPreview formPreview_page_contacts">
+        <div class="formPreview__wrapper">
+            <div class="formPreview__group">
+                <label for="name" class="formPreview__label">Имя*</label>
+                <input type="text" id="name" class="formPreview__input">
             </div>
-            <div class="input-group">
-                <label for="email">E-mail*</label>
-                <input id='email' type="text" value="example@gmail.com">
+            <div class="formPreview__group">
+                <label for="email" class="formPreview__label">E-mail*</label>
+                <input id='email' type="text" value="example@gmail.com" class="formPreview__input">
             </div>
-            <div class="input-group">
-                <label for="thema">Тема</label>
-                <input type="text" id="thema">
+            <div class="formPreview__group">
+                <label for="thema" class="formPreview__label">Тема</label>
+                <input type="text" id="thema" class="formPreview__input">
             </div>
-            <div class="input-group">
-                <label for="text_area">Текст сообщения*</label>
-                <textarea name="text_area" id="text_area" cols="30" rows="5"></textarea>
+            <div class="formPreview__group">
+                <label for="text_area" class="formPreview__label">Текст сообщения*</label>
+                <textarea name="text_area" id="text_area" cols="30" rows="5" class="formPreview__area"></textarea>
             </div>
             <input type="submit" class="more more_button_form" value="Отправить">
-        </form>
+        </div>
+    </form>
 
     <div class="contactsInfo">
         <div class="contactsInfo__item">

@@ -255,6 +255,10 @@ a.more,input.more{
     padding: 0 2rem;
     font-weight:400;
     margin-bottom: -1rem;
+    @include mod('small'){
+      font-size: 1.2rem;
+      top: -2rem;
+    }
   }
 
   @include el('text'){
@@ -262,15 +266,42 @@ a.more,input.more{
     font-weight:400;
     margin-top:0;
   }
+
+  @include el('listChar'){
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+
+  }
+  @include el('itemChar'){
+    display: inline-block;
+    @include font($Main-Font, 1rem, 400, $Dark);
+    margin: 1rem 0;
+    margin-right: 1rem;
+  }
+  @include el('itemCharSpec'){
+    background-color: $Blue-light;
+    padding: 0.5rem 0.8rem;
+    border-radius: 3rem;
+    margin-left: 0.5rem;
+    font-weight:300;
+  }
+
   @include el('productsList'){
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     .product{
-
+      margin-bottom: 2rem;
+      margin-right: 2rem;
     }
   }
 }
+
+
+
+
+
 .formPreview{
   &__title{
     margin: 0px 0px 1.5rem!important;

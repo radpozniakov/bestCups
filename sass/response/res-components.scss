@@ -39,6 +39,19 @@
 
 }
 
+
+@include breakpoint(max-width 540px){
+
+  .borderedSection{
+    @include el('productsList'){
+      .product{
+        margin-bottom: 2rem;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
 @include breakpoint(max-width 400px){
   .borderedSection{
     @include el('title'){

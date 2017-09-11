@@ -12,7 +12,7 @@ gulp.task('sass', function() {
       includePaths: ['./bower_components/breakpoint-sass/stylesheets']
     }).on('error', sass.logError))
     .pipe(autoprefixer({
-        browsers: ['last 4 versions'],
+        browsers: ['last 15 versions', '>1%', 'ie 10'],
         cascade: false
       }))
     .pipe(cssnano())

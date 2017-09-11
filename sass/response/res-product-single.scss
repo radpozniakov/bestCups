@@ -1,0 +1,44 @@
+@include breakpoint(max-width 890px){
+  .singleProduct{
+    @include el('images'){
+      width: 42%;
+    }
+    @include el('information'){
+      width: 54%;
+    }
+  }
+}
+@include breakpoint(max-width 768px){
+  .singleProduct{
+    @include el('images'){
+      width: 100%;
+    }
+    @include el('information'){
+      width: 100%;
+    }
+    @include el('imagesList'){
+      display: none;
+    }
+
+    @include el('informationTitle'){
+      @include font($Main-Font, 1.5rem, 400, $Dark);
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    @include el('buySection'){
+      text-align: center;
+      margin: 1rem 0 3rem;
+    }
+
+    @include el('price'){
+      font-size:1.8rem;
+      font-weight:400;
+      float: none;
+      margin-top:2.5rem;
+      margin-bottom:2.5rem;
+      margin-right:0;
+      line-height: 0;
+    }
+  }
+}

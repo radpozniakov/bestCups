@@ -1,0 +1,82 @@
+.singleProduct{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include mod(marginBottom){
+    margin-bottom: 3rem;
+  }
+
+  @include el('images'){
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+  }
+  @include el('imagesList'){
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  @include el('imagesListItem'){
+    margin: 0.5rem 1rem;
+    margin-left: 0rem;
+  }
+  @include el('imagesListItemImg'){
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+  }
+
+  @include el(imageBig){
+    width: 100%;
+  }
+  @include el(imageBigItem){
+    width: 100%;
+  }
+
+  @include el('information'){
+    width: 68%;
+  }
+  @include el('informationTitle'){
+    @include font($Main-Font, 1.7rem, 400, $Dark);
+    margin-top: 0;
+  }
+
+  @include el('buySection'){
+    margin: 2rem 0 3rem;
+  }
+
+  @include el('price'){
+    @include font($Main-Font, 1.7rem, 400, $Blue-active);
+    margin-top: 0;
+    float: left;
+    margin-right: 3rem;
+    line-height: 2.5rem;
+  }
+
+  @include el('buyButton'){
+      background: $Blue-active;
+      padding: 0.6rem 1.1rem;
+      border-radius: 0.5rem;
+      border: none;
+      margin: 0 auto;
+      cursor: pointer;
+      outline: none;
+      @include font($Main-Font, 1.1rem, 300, white);
+      letter-spacing: 0.06rem;
+      &:hover{
+        background-color: darken($Blue-active, 10%);
+      }
+      svg{
+          position: relative;
+          top: 0.06rem;
+          left: 0.3rem;
+          margin-right: 0.6rem;
+      }
+  }
+
+
+}
+

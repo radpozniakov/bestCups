@@ -376,3 +376,44 @@ a.more,input.more{
 .select2-selection--single {
   padding-left: 0px!important;
 }
+
+.notFind{
+  @include el('imgWrapper'){
+    width: 60%;
+    height: 20rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../img/404.png");
+    margin: 0 auto;
+  }
+  @include el('title'){
+    @include font($Main-Font, 7rem, 500, $Red);
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin: 2rem;
+  }
+  @include el('subTitle'){
+    @include font($Main-Font, 2rem, 400, $Dark);
+    text-align: center;
+  }
+  @include el('description'){
+    @include font($Main-Font, 1.2rem, 300, $Dark);
+    text-align: center;
+    margin: 1rem;
+    line-height: 1.6rem;
+  }
+  @include el('backwardLink'){
+    text-align: center;
+    margin: 2rem;
+    width: auto;
+  }
+  @include el('backwardLinkHref'){
+    text-decoration: none;
+    @include font($Main-Font, 1.2rem, 400, $Blue-active);
+    &:hover{
+      text-decoration: underline;
+      color: darken($Blue-active, 15%);
+    }
+  }
+}

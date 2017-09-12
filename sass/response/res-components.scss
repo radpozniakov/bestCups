@@ -37,8 +37,23 @@
     }
   }
 
+
+  .notFind {
+    @include el('imgWrapper') {
+      width: 80%;
+    }
+  }
+
 }
 
+@include breakpoint(max-width 650px){
+  .notFind {
+    @include el('imgWrapper') {
+      width: 80%;
+      height: 16rem;
+    }
+  }
+}
 
 @include breakpoint(max-width 540px){
 
@@ -50,8 +65,31 @@
       }
     }
   }
+
+  .notFind {
+    @include el('title'){
+      @include font($Main-Font, 4rem, 500, $Red);
+      letter-spacing: 0.5rem;
+      text-align: center;
+      margin: 1rem;
+    }
+  }
 }
 
+@include breakpoint(max-width 540px){
+  .notFind {
+    @include el('imgWrapper'){
+      width: 95%;
+      height: 12rem;
+    }
+    @include el('title'){
+      @include font($Main-Font, 4rem, 500, $Red);
+      letter-spacing: 0.5rem;
+      text-align: center;
+      margin: 1rem;
+    }
+  }
+}
 @include breakpoint(max-width 400px){
   .borderedSection{
     @include el('title'){
@@ -59,9 +97,12 @@
       top: -2rem;
     }
   }
+  .notFind {
+    @include el('subTitle'){
+      font-size:1.5rem;
+    }
+  }
 }
-
-
 
 @include breakpoint(max-width 320px){
   .borderedSection{

@@ -27,8 +27,5 @@
 @include breakpoint(max-width 735px){
   .publication{
     width: 100%;
-    @include el('thumbnail'){
-      height: 15rem;
-    }
   }
 }

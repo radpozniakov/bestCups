@@ -1,3 +1,8 @@
+@include breakpoint(max-width 1000px){
+  .addCartPopup{
+    width: 80%;
+  }
+}
 @include breakpoint(max-width 890px){
   .breadCrumbs{
     padding: 1rem 0;
@@ -74,8 +79,11 @@
       margin: 1rem;
     }
   }
-}
 
+  .addCartPopup{
+    width: 95%;
+  }
+}
 @include breakpoint(max-width 540px){
   .notFind {
     @include el('imgWrapper'){
@@ -87,6 +95,33 @@
       letter-spacing: 0.5rem;
       text-align: center;
       margin: 1rem;
+    }
+  }
+}
+
+
+
+
+@include breakpoint(max-width 500px){
+  .addCartPopup{
+    padding-bottom:1.5rem;
+    @include el('imgItem'){
+      width:70%;
+    }
+    @include el('cartInfo'){
+      flex-direction: column;
+      justify-content: center;
+      padding-left:1.5rem;
+    }
+    @include el('cartInfoItem'){
+      margin: 0.4rem 0;
+    }
+    @include el('actions'){
+      flex-direction: column;
+    }
+    @include el('actionsItem'){
+      text-align: center;
+      margin: 0.5rem 1rem;
     }
   }
 }

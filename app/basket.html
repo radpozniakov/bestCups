@@ -215,10 +215,10 @@
 
             <tbody class="basketTable__body">
             <tr class="basketTable__bodyRow">
-                <td class="basketTable__bodyRowItem">1</td>
+                <td class="basketTable__bodyRowItem"><i onclick="cart.remove('36','remove-tr-1');" title="Удалить" class="fa fa-times-circle basketTable__bodyRowDelete" aria-hidden="true"></i></td>
                 <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/2.png" alt=""></a></td>
                 <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">In Condimentum Facilisis Porta. Sed</a></td>
-                <td class="basketTable__bodyRowItem"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--plus">+</div><span class="basketTable__bodyRowItemCounter">2</span><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--minus">-</div></td>
+                <td class="basketTable__bodyRowItem"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--plus basketTable__bodyRowItemButton--deactive">+</div><input class="basketTable__bodyRowItemCounter" value="2"><div class="basketTable__bodyRowItemButton basketTable__bodyRowItemButton--minus">-</div></td>
                 <td class="basketTable__bodyRowItem"><span>11грн</span></td>
                 <td class="basketTable__bodyRowItem"><span>22грн</span></td>
             </tr>
@@ -254,55 +254,60 @@
         <p class="priceOrder__text">Всего к оплате:<span class="priceOrder__finalNumber">1800грн</span></p>
     </div>
 
-    <div class="orderBy-wrapper">
-
-        <div class="borderedSection borderedSection--form">
-            <h3 class="borderedSection__title">Оформление заказа</h3>
-            <form action="" class="formPreview">
-                <div class="formPreview__wrapper">
-                    <div class="formPreview__bigGroup">
-                        <div class="formPreview__group">
-                            <label for="name" class="formPreview__label">Имя*</label>
-                            <input type="text" id="name" class="formPreview__input">
-                        </div>
-                        <div class="formPreview__group">
-                            <label for="phone" class="formPreview__label">Телефон*</label>
-                            <input id='phone' type="tel" value="" class="formPreview__input">
-                        </div>
-                    </div>
-                    <div class="formPreview__group">
-                        <label for="thema-select" class="formPreview__label">Тема</label>
-                        <select name="thema-select" id="thema-select">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                    <div class="formPreview__bigGroup">
-                        <div class="formPreview__group">
-                            <label for="city" class="formPreview__label">Город доставки*</label>
-                            <input type="text" id="city" class="formPreview__input">
-                        </div>
-                        <div class="formPreview__group">
-                            <label for="email" class="formPreview__label">E-mail*</label>
-                            <input id='email' type="text" value="example@gmail.com" class="formPreview__input">
-                        </div>
-                    </div>
-                    <input type="submit" class="more more_button_form" value="Оформить заказ">
-                </div>
-            </form>
-        </div>
-
-        <div class="borderedSection borderedSection--form">
-            <h3 class="borderedSection__title">Информация</h3>
-            <p class="borderedSection__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque deserunt ex incidunt inventore nostrum quisquam sequi! Alias animi consequatur cupiditate dolore, dolorem dolores doloribus eos est eveniet exercitationem id ipsa iste laboriosam molestiae natus nisi perferendis possimus provident quae quas quia recusandae rerum sint suscipit tempora veritatis vitae! Nobis!
-            </p>
-        </div>
-
+    <div class="directionActions">
+        <a class="directionActions__item" href=""><i class="fa fa-arrow-circle-o-left directionActions__icon directionActions__icon--left" aria-hidden="true"></i>Продолжить покупки</a>
+        <a class="directionActions__item" href="">Оформление заказа <i class="fa fa-arrow-circle-o-right directionActions__icon directionActions__icon--right" aria-hidden="true"></i></a>
     </div>
+
+    <!--<div class="orderBy-wrapper">-->
+
+        <!--<div class="borderedSection borderedSection&#45;&#45;form">-->
+            <!--<h3 class="borderedSection__title">Оформление заказа</h3>-->
+            <!--<form action="" class="formPreview">-->
+                <!--<div class="formPreview__wrapper">-->
+                    <!--<div class="formPreview__bigGroup">-->
+                        <!--<div class="formPreview__group">-->
+                            <!--<label for="name" class="formPreview__label">Имя*</label>-->
+                            <!--<input type="text" id="name" class="formPreview__input">-->
+                        <!--</div>-->
+                        <!--<div class="formPreview__group">-->
+                            <!--<label for="phone" class="formPreview__label">Телефон*</label>-->
+                            <!--<input id='phone' type="tel" value="" class="formPreview__input">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="formPreview__group">-->
+                        <!--<label for="thema-select" class="formPreview__label">Тема</label>-->
+                        <!--<select name="thema-select" id="thema-select">-->
+                            <!--<option value="0">0</option>-->
+                            <!--<option value="1">1</option>-->
+                            <!--<option value="2">2</option>-->
+                            <!--<option value="3">3</option>-->
+                            <!--<option value="4">4</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                    <!--<div class="formPreview__bigGroup">-->
+                        <!--<div class="formPreview__group">-->
+                            <!--<label for="city" class="formPreview__label">Город доставки*</label>-->
+                            <!--<input type="text" id="city" class="formPreview__input">-->
+                        <!--</div>-->
+                        <!--<div class="formPreview__group">-->
+                            <!--<label for="email" class="formPreview__label">E-mail*</label>-->
+                            <!--<input id='email' type="text" value="example@gmail.com" class="formPreview__input">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<input type="submit" class="more more_button_form" value="Оформить заказ">-->
+                <!--</div>-->
+            <!--</form>-->
+        <!--</div>-->
+
+        <!--<div class="borderedSection borderedSection&#45;&#45;form">-->
+            <!--<h3 class="borderedSection__title">Информация</h3>-->
+            <!--<p class="borderedSection__text">-->
+                <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque deserunt ex incidunt inventore nostrum quisquam sequi! Alias animi consequatur cupiditate dolore, dolorem dolores doloribus eos est eveniet exercitationem id ipsa iste laboriosam molestiae natus nisi perferendis possimus provident quae quas quia recusandae rerum sint suscipit tempora veritatis vitae! Nobis!-->
+            <!--</p>-->
+        <!--</div>-->
+
+    <!--</div>-->
 
 </main>
 
@@ -410,6 +415,7 @@
     </div>
 </footer>
 <script src="js/plugins/jquery-3.2.1.min.js"></script>
+<script src="https://use.fontawesome.com/c873fc24b7.js"></script>
 <script src="js/plugins/select2.min.js"></script>
 <script src="js/header.js"></script>
 <script>

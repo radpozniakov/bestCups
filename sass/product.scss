@@ -18,15 +18,15 @@
   &:hover{
     box-shadow: 0 1px 3px 3px rgba(1, 0, 1, 0.16);
   }
-  @include el('imageBlock'){
-    width: 100%;
-    height: 12rem;
-    background-size: cover;
+  @include el('image'){
+    max-width: 100%;
   }
   @include el('title'){
+    height: 3.2rem;
+    overflow: hidden;
     text-align: center;
     margin: 0;
-    padding: 1rem 0.6rem 0rem;
+    padding: 0.8rem 0.6rem 0rem;
     line-height: 1.4rem;
   }
   @include el('titleHref'){
@@ -37,10 +37,13 @@
     }
   }
   @include el('metaInfo'){
+    height: 5.4rem;
+    overflow: hidden;
     list-style: none;
     text-align: center;
     padding: 0;
-    margin-bottom:2rem;
+    margin-top:0;
+    margin-bottom:1.5rem;
   }
   @include el('metaInfoItem'){
     display: inline-block;
@@ -52,9 +55,10 @@
   }
 
   @include el('button'){
+    display: flex;
+    justify-content: center;
     background: none;
     border: none;
-    display: flex;
     margin: 0 auto;
     cursor: pointer;
     outline: none;

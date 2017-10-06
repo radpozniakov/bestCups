@@ -1,6 +1,9 @@
 .publicationGrid{
   display: flex;
   flex-wrap: wrap;
+  @include mod('oneColumn'){
+   justify-content: center!important;
+  }
   justify-content: space-between;
   .publication{
     margin-bottom: 2rem;
@@ -9,10 +12,17 @@
 
 .publication{
   width: 48%;
+  @include mod('oneColumn'){
+    width: 70%;
+  }
   @include el('thumbnail'){
     width: 100%;
     height: 19rem;
     background-size: cover;
+  }
+  @include el('thumbnailImg'){
+    width: 100%;
+    max-width: 100%;
   }
   @include el('meta'){
     display: flex;

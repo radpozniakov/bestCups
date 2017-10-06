@@ -1,16 +1,13 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Корзина</title>
+    <title>Оформление заказа</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+
 </head>
 <body>
 <header class="header">
@@ -188,38 +185,141 @@
 </div>
 
 <div class="breadCrumbs">
-    <h1 class="breadCrumbs__title">Логин</h1>
+    <h1 class="breadCrumbs__title">Оформление заказа</h1>
     <ul class="breadCrumbs__pathList">
         <li class="breadCrumbs__listItem"><a class="breadCrumbs__listHref" href="#">Главная</a></li>
-        <li class="breadCrumbs__listItem">логин</li>
+        <li class="breadCrumbs__listItem"><a class="breadCrumbs__listHref" href="#">корзина</a></li>
+        <li class="breadCrumbs__listItem">оформление заказа</li>
     </ul>
 </div>
-<div class="shopMenu">
-    <ul class="shopMenu__list">
-        <li class="shopMenu__listItem"><a class="shopMenu__listItemHref shopMenu__listItemHref--activeLink" href="">Логин</a></li>
-        <li class="shopMenu__listItem"><a class="shopMenu__listItemHref" href="">Регистрация</a></li>
-    </ul>
-</div>
-
 <main class="container">
-    <section class="registrationForm">
-        <div class="registrationForm__wrapper">
+
+    <div style="margin-top: 2rem;" class="orderBy-wrapper">
+
+        <div class="borderedSection borderedSection--form">
+            <h3 class="borderedSection__title">О покупателе</h3>
             <form action="" class="formPreview">
-                <h2 class="formPreview__title">Логин</h2>
-                <div class="formPreview__group">
-                    <label for="nameInput" class="formPreview__label">Имя*</label>
-                    <input id='nameInput' type="tel" value="" class="formPreview__input">
-                </div>
+                <div class="formPreview__wrapper">
+                    <div class="formPreview__bigGroup">
+                        <div class="formPreview__group">
+                            <label for="name" class="formPreview__label">Имя*</label>
+                            <input type="text" id="name" class="formPreview__input">
+                        </div>
 
-                <div class="formPreview__group">
-                    <label for="password1Input" class="formPreview__label">Пароль*</label>
-                    <input id='password1Input' type="password" value="" class="formPreview__input">
-                </div>
+                        <div class="formPreview__group">
+                            <label for="email" class="formPreview__label">E-mail*</label>
+                            <input id='email' type="text" value="example@gmail.com" class="formPreview__input">
+                        </div>
 
-                <input type="submit" class="more  more_button_login" value="Войти">
+                    </div>
+
+                    <div class="formPreview__bigGroup">
+                        <div class="formPreview__group">
+                            <label for="phone" class="formPreview__label">Телефон*</label>
+                            <input id='phone' type="tel" value="" class="formPreview__input">
+                        </div>
+
+                        <div class="formPreview__group">
+                           <button>Авторизация</button>
+                        </div>
+
+                    </div>
+
+                    <label for=""><input type="checkbox">Хочу зарегестрироваться</label>
+
+                    <div class="formPreview__bigGroup">
+                        <div class="formPreview__group">
+                            <label for="name" class="formPreview__label">Пароль*</label>
+                            <input type="text" id="name" class="formPreview__input">
+                        </div>
+
+                        <div class="formPreview__group">
+                            <label for="email" class="formPreview__label">Подтверждение пароля*</label>
+                            <input id='email' type="text" class="formPreview__input">
+                        </div>
+
+                    </div>
+
+                </div>
             </form>
         </div>
-    </section>
+
+        <div class="borderedSection borderedSection--form">
+            <h3 class="borderedSection__title">Доставка и оплата</h3>
+            <h4  style="font-weight: 600;" class="borderedSection__text">
+                Выберите удобный способ доставки для вашего заказа
+            </h4>
+            <label class="borderedSection__text" for="dew"> <input name="dostavka" type="radio" id="dew" checked value="dzen"> Самовывоз</label>
+
+            <br>
+            <label class="borderedSection__text"> <input name="dostavka" type="radio" value="dzen"> Новая почта</label>
+            <br>
+            <label class="borderedSection__text"> <input name="dostavka" type="radio" value="dzen"> Курьер</label>
+            <hr>
+
+            <h4  style="font-weight: 600;" class="borderedSection__text">
+                Выберите удобный способ оплаты
+            </h4>
+            <label class="borderedSection__text" for="dew"> <input name="oplata" type="radio" id="dew" checked value="dzen">Оплата при получении</label>
+            <br>
+            <label class="borderedSection__text"> <input name="oplata" type="radio" value="dzen"> На карту банка</label>
+            <br>
+            <label class="borderedSection__text"> <input name="oplata" type="radio" value="dzen"> Безналичный расчет</label>
+
+        </div>
+    </div>
+
+    <div style="margin-top: 3rem" class="borderedSection borderedSection--form">
+        <h3 class="borderedSection__title">Ваши товары</h3>
+
+        <div class="table-wrapper">
+            <table class="basketTable">
+                <thead class="basketTable__head">
+                <tr class="basketTable__headRow">
+                    <th class="basketTable__headRowItem">Изображение</th>
+                    <th style="text-align: left" class="basketTable__headRowItem">Название товара</th>
+                    <th class="basketTable__headRowItem">Количество</th>
+                    <th class="basketTable__headRowItem">Цена</th>
+                    <th class="basketTable__headRowItem">Стоимость</th>
+                </tr>
+                </thead>
+
+                <tbody class="basketTable__body">
+                <tr class="basketTable__bodyRow">
+                    <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/2.png" alt=""></a></td>
+                    <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">In Condimentum Facilisis Porta. Sed</a></td>
+                    <td class="basketTable__bodyRowItem"><input class="basketTable__bodyRowItemCounter" value="2"></td>
+                    <td class="basketTable__bodyRowItem"><span>11грн</span></td>
+                    <td class="basketTable__bodyRowItem"><span>22грн</span></td>
+                </tr>
+
+                <tr class="basketTable__bodyRow">
+                    <td class="basketTable__bodyRowItem"><a href=""><img class="basketTable__bodyRowItemImg" src="img/products/2.png" alt=""></a></td>
+                    <td class="basketTable__bodyRowItem basketTable__bodyRowItem--title"><a class="basketTable__bodyRowItemTitle" href="">In Condimentum Facilisis Porta. Sed</a></td>
+                    <td class="basketTable__bodyRowItem"><input class="basketTable__bodyRowItemCounter" value="2"></td>
+                    <td class="basketTable__bodyRowItem"><span>11грн</span></td>
+                    <td class="basketTable__bodyRowItem"><span>22грн</span></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="priceOrder">
+        <p class="priceOrder__text">Стоимость:<span>1800грн</span></p>
+        <p class="priceOrder__text">Доставка:<span>35грн</span></p>
+        <p class="priceOrder__text">Всего к оплате:<span class="priceOrder__finalNumber">1835грн</span></p>
+    </div>
+
+
+
 </main>
 
 <footer class="mainFooter">
@@ -326,6 +426,7 @@
     </div>
 </footer>
 <script src="js/plugins/jquery-3.2.1.min.js"></script>
-<script src="js/header.js"></script>
+<script src="https://use.fontawesome.com/c873fc24b7.js"></script>
+
 </body>
 </html>

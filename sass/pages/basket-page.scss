@@ -24,6 +24,16 @@
       width: 25%;
     }
   }
+  @include el('bodyRowItemCounter'){
+    width: 2rem;
+    padding: 0.4rem 0.5rem;
+    text-align: center;
+    border: solid 1px $Blue-light;
+    &:focus{
+      border-color: $Blue-active;
+    }
+
+  }
   @include el('bodyRowItemTitle'){
     text-decoration: none;
     color: $Dark;
@@ -35,6 +45,14 @@
    width: 6rem;
    height: 6rem;
     border-radius: 50%;
+  }
+  @include el('bodyRowDelete'){
+   color: $Red;
+    font-size: 1.6rem!important;
+    cursor: pointer;
+    &:hover{
+      color: darken($Red, 10%);
+    }
   }
   @include el('bodyRowItemButton'){
     width: 2rem;
@@ -52,6 +70,15 @@
     &:hover{
       background-color: $Blue-active;
       color: white;
+    }
+    @include mod('deactive'){
+      border-color: #ccc;
+      color: #ccc;
+      &:hover{
+        background-color: white;
+        color: #ccc;
+        cursor: default;
+      }
     }
   }
 }

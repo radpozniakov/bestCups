@@ -10,6 +10,8 @@
     flex-grow: 2;
   }
 }
+
+
 .logotype{
   margin: 0rem;
   padding: 0rem;
@@ -107,6 +109,13 @@
     letter-spacing: 0.09rem;
     text-transform: uppercase;
     color: $Dark;
+  }
+  @include el('titleHref'){
+    text-decoration: none;
+    color: $Dark;
+    &:hover{
+      color: $Blue-active;
+    }
   }
   @include el('list'){
     list-style: none;

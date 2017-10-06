@@ -298,10 +298,6 @@ a.more,input.more{
   }
 }
 
-
-
-
-
 .formPreview{
   &__title{
     margin: 0px 0px 1.5rem!important;
@@ -342,6 +338,10 @@ a.more,input.more{
     margin-bottom: 0.625rem;
     @include font($Main-Font, 1rem, 400,$Dark );
   }
+  &__error{
+    margin: 0.5rem 0 0.5rem;
+    @include font($Main-Font, 0.9rem, 400,$Red );
+  }
   &__area,&__input{
     background-color: #F5F5F5;
     resize: none;
@@ -353,6 +353,9 @@ a.more,input.more{
     @include font($Main-Font, 0.875rem, 400,$Dark );
     &:active,&:hover,&:focus{
       border-color: #4587C8;
+    }
+    &--error{
+      border-color: red;
     }
   }
 }
@@ -376,7 +379,6 @@ a.more,input.more{
 .select2-selection--single {
   padding-left: 0px!important;
 }
-
 .notFind{
   @include el('imgWrapper'){
     width: 60%;
@@ -417,3 +419,117 @@ a.more,input.more{
     }
   }
 }
+
+
+.addCartPopup {
+  background-color: white;
+  width: 50%;
+  max-width: 40rem;
+  margin: 0 auto;
+  position: relative;
+  @include el('titleBlock') {
+    @include font($Main-Font, 1.3rem, 300, white);
+    background-color: $Blue-active;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 1.2rem 0;
+    text-align: center;
+  }
+  @include el('imgItem') {
+    width: 50%;
+    margin: 2rem auto 1rem;
+    border-radius: 1rem;
+  }
+  @include el('titleItem') {
+    @include font($Main-Font, 1.3rem, 400, $Dark);
+    text-align: center;
+    line-height: 1.7rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+  @include el('priceItem') {
+    @include font($Main-Font, 1.4rem, 400, $Blue-active);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  @include el('cartInfo') {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    border-bottom: solid 1px $Blue-light;
+    border-top: solid 1px $Blue-light;
+  }
+  @include el('cartInfoItem') {
+    @include font($Main-Font, 1.1rem, 400, $Dark);
+    margin:0rem 1.5rem;
+    span{
+      color: $Blue-active;
+      margin-left:0.5rem;
+    }
+  }
+
+  @include el('actions'){
+    display: flex;
+    justify-content: center;
+    margin: 0rem;
+  }
+  @include el('actionsItem'){
+    border: solid 1px $Dark;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 1rem 1.5rem;
+    text-decoration: none;
+    @include font($Main-Font, 1rem, 300, $Dark);
+    @include mod('goBasket'){
+      background-color: $Blue-active;
+      border: $Blue-active;
+      color: white;
+      &:hover{
+        background-color: darken($Blue-active, 10%);
+      }
+    }
+    @include mod('goOn'){
+      border: $Blue-active solid 1px;
+      color: $Blue-active;
+      &:hover{
+        background-color: lighten($Blue-active, 40%);
+      }
+    }
+  }
+
+}
+
+.directionActions{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include el('item'){
+    @include font($Main-Font, 1.1rem, 300, $Blue-active);
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      color: darken($Blue-active, 15%);
+    }
+    &:last-child{
+      color: $Green;
+      &:hover{
+        color: darken($Green, 15%);
+      }
+    }
+  }
+  @include el(icon){
+    font-size:1.3rem!important;
+    @include mod('left'){
+      margin-right:.5rem;
+    }
+    @include mod('right'){
+      margin-left:.5rem;
+    }
+  }
+}
+
+
+

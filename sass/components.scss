@@ -532,4 +532,83 @@ a.more,input.more{
 }
 
 
+.popupLogin{
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0px 0px 33px -14px rgba(0,0,0,0.75);
+  background-color: white;
+  border-radius: 8px;
+
+  @include el('content'){
+    padding: 1.5rem;
+  }
+  @include el('title'){
+    @include font($Main-Font, 1.3rem, 300, $Gray);
+    text-align: center;
+    padding: 1rem;
+    background-color: $Blue-light;
+
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  @include el('form'){
+    display: flex;
+    flex-direction: column;
+  }
+  @include el('label'){
+    @include font($Main-Font, 1rem, 400, $Gray);
+    cursor: pointer;
+    margin:1rem 0 0;
+  }
+  @include el('input'){
+    @include font($Main-Font, 1rem, 400, $Dark);
+    padding: 0.5rem;
+    margin: 0.5rem 0 1rem;
+  }
+
+  @include el('submit'){
+    @include font($Main-Font, 1rem, 400, white);
+    padding: 0.7rem;
+    margin: 0.5rem 0 1.4rem;
+    background-color: $Blue-active;
+    border: none;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($Blue-active, 10%);
+    }
+  }
+
+  @include el('addLinks'){
+    padding-left:0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  @include el('addItem'){
+    margin: 0 0.5rem;
+    &::after{
+      content: "/";
+      margin-left:0.8rem;
+    }
+    &:last-child{
+      &:after{
+        content: none;
+      }
+    }
+    a{
+      text-decoration: none;
+      @include font($Main-Font, 1rem, 300, $Blue-active);
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+
+}
+
 

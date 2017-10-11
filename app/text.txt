@@ -1,1 +1,1 @@
-Basic txt text
+i am simple text file

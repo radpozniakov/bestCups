@@ -2,7 +2,17 @@
   outline: none;
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
 .container{
+  box-sizing: border-box;
+    flex: 1;
+    width: 100%;
     max-width: 90rem;
     margin: 0 auto;
     padding: 3rem 3rem;
@@ -44,9 +54,16 @@
   border-radius: 0.75rem;
   @include font($Main-Font, 1rem, 400, $Dark );
 }
+.more_button_back{
+  background-color: #fff!important;
+  border: solid 1px $Blue-active !important;
+  color: $Blue-active !important;
+  &:hover{
+    background-color: $Blue-light!important;
+  }
+}
 a.more,input.more{
   display: block;
-
   padding:0.625rem 0rem ;
   margin:0rem 0rem 1.5rem;
   text-align: center;
@@ -86,6 +103,12 @@ a.more,input.more{
     width:10.25rem;
     margin:1.5rem 0rem 1.5rem;
     font-size: 1rem;
+  }
+}
+.checkout--button{
+  background-color: #72C954!important;
+  &:hover{
+    background-color: darken(#72C954, 10%)!important;
   }
 }
 .star-list{
@@ -333,6 +356,13 @@ a.more,input.more{
     margin:0rem 0rem 1.21875rem;
     display: flex;
     flex-direction: column;
+  }
+  &__groupAct{
+    display: flex;
+    justify-content: space-between;
+    @include mod('reverse'){
+      flex-direction: row-reverse!important;
+    }
   }
   &__label{
     margin-bottom: 0.625rem;
@@ -606,9 +636,229 @@ a.more,input.more{
       }
     }
   }
-
-
-
 }
 
 
+.searchSection{
+  max-width: 50rem;
+  width: 90%;
+  margin: 1rem auto 4rem;
+
+  @include el('formGroup'){
+    margin: 1.2rem 0;
+    @include mod('three'){
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap!important;
+    }
+    @include mod('flex'){
+      display: flex;
+      flex-direction: row-reverse;
+      padding-top:4rem;
+    }
+  }
+
+  @include el('label'){
+    @include font($Main-Font, 1.1rem, 300, $Dark);
+    display: block;
+    margin:0.7rem 0;
+    @include mod('fun'){
+      margin:0;
+      padding-left:0.5rem;
+      line-height: 1rem;
+      color: $Dark;
+    }
+  }
+  @include el('inputText'){
+    width: 100%;
+    @include font($Main-Font, 1.1rem, 400, $Dark);
+    padding: 0.7rem 0.8rem;
+    border-radius: 3px;
+    border: solid 1px lighten($Gray, 40%);
+  }
+  @include el('inputSelect'){
+    width: 15rem;
+    height: 40px;
+    background-color: white;
+    overflow: hidden;
+    @include font($Main-Font, 1rem, 400, $Dark);
+    -webkit-appearance: none;
+    padding: 0.7rem 0.8rem;
+    border-radius: 3px;
+    border: solid 1px lighten($Gray, 40%);
+  }
+  @include el('submit'){
+    @include font($Main-Font, 1rem, 400, white);
+    background-color: $Blue-active;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 3px;
+    &:hover{
+      cursor: pointer;
+      background-color: darken($Blue-active, 10%);
+    }
+  }
+
+}
+.SearchResults-title{
+  text-align: center;
+  @include font($Main-Font, 1.6rem, 400, $Dark);
+  padding-bottom: 1.5rem;
+  border-bottom: solid 1px lighten($Gray, 40%);
+  margin-bottom: 3rem;
+}
+
+.accountSucces{
+  @include el('icon'){
+    width: 10rem;
+    margin: 0 auto;
+  }
+  @include el('title'){
+    @include font($Main-Font, 2rem, 400, $Dark);
+    text-align: center;
+  }
+  @include el('description'){
+    @include font($Main-Font, 1.1rem, 300, $Dark);
+    text-align: center;
+    margin: 1rem;
+    line-height: 2rem;
+    width: 70%;
+    margin: 0 auto;
+    a.link{
+      text-decoration: none;
+      color: $Blue-active;
+      &:hover{
+        text-decoration: underline;
+        color: darken($Blue-active, 10%);
+      }
+    }
+  }
+  @include el('href'){
+    @include font($Main-Font, 1.2rem, 300, white);
+    background-color: $Blue-active;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+    &:hover{
+      background-color: darken($Blue-active, 10%);
+    }
+  }
+}
+
+.accountProfile{
+  max-width: 40rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  a{
+    text-decoration: none;
+  }
+  @include el('itemLink'){
+    background-color: $Blue-light;
+    margin: 0.8rem 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 2rem;
+    border-radius: 5px;
+    &:hover{
+      background-color: darken($Blue-light, 10%);
+    }
+  }
+  @include el('title'){
+    @include font($Main-Font, 1.2rem, 300, $Dark);
+    letter-spacing: 1px;
+  }
+  @include el('icon'){
+    width: 2rem;
+    padding-top: 1rem;
+  }
+}
+
+.orderDetails{
+  margin-bottom:4rem;
+  @include mod('mtop'){
+    margin-top: 3rem;
+  }
+  @include font($Main-Font, 1rem, 500, $Dark);
+  @include el('title'){
+    @include font($Main-Font, 1.2rem, 400, $Gray);
+  }
+
+  @include el('table'){
+    width: 100%;
+    border-collapse: collapse;
+  }
+  @include el('tr'){
+    border: solid 1px $Gray;
+  }
+  @include el('tdItem'){
+    padding: 1rem;
+    border: solid 1px lighten($Gray, 35%);
+    font-weight: 400;
+    a{
+      text-decoration: none;
+      color: $Blue-active;
+      &:hover{
+        text-decoration: underline;
+        color: darken($Blue-active, 10%);
+      }
+    }
+  }
+  @include el('thItem'){
+    padding: 1rem;
+    border: solid 1px lighten($Gray, 35%);
+    background-color: $Blue-light;
+    font-weight: 500;
+  }
+
+  @include el('list'){
+    text-align: right;
+    list-style: none;
+    padding-left:0;
+  }
+  @include el('listItem'){
+    margin:2rem 0;
+    font-weight:400;
+    font-size:1.1rem;
+    span{
+      margin-left:1rem;
+      background-color: $Blue-light;
+      padding: 0.6rem 0.8rem;
+      border-radius: 5px;
+      font-weight:400;
+    }
+  }
+}
+
+.text-empty-order{
+  text-align: center;
+  @include font($Main-Font, 1.1rem, 300, $Dark);
+}
+
+.disabled-a{
+   pointer-events: none;
+   cursor: default;
+ }
+
+.alert-error{
+  background-color: lighten(#FF8D8D, 14%);
+  @include font($Main-Font, 1rem, 400, $Dark);
+  padding: 1rem 0.8rem;
+  line-height: 1.6rem;
+  border-radius: 5px;
+  i {
+    color: darken(#FF8D8D, 10%)!important;
+    margin-right: 0.5rem;
+    font-size:1.2rem;
+  }
+}
+.alert-success{
+  background-color: #8effbd;
+  @include font($Main-Font, 1rem, 400, $Dark);
+  padding: 1rem 0.8rem;
+  line-height: 1.6rem;
+  border-radius: 5px;
+}

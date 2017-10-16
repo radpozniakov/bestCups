@@ -47,3 +47,15 @@
     }
   }
 }
+.contactsMap{
+  @include el('Title'){
+    @include font($Main-Font, 1.2rem, 400, $Dark);
+    margin-top: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  @include el('Section'){
+   width: 100%;
+    height: 50vh;
+  }
+}

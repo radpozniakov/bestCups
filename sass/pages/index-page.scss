@@ -167,6 +167,9 @@ h2.title-section {
     @include font($Main-Font, 0.875rem, 400, $Dark );
   }
 }
+.star-list{
+  justify-content: center;
+}
 .opt-block{
   &__wrapper{
     display: flex;

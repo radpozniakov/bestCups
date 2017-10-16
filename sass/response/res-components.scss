@@ -51,6 +51,46 @@
 
 }
 
+
+@include breakpoint(max-width 768px) {
+  .searchSection {
+    @include el('formGroup') {
+      justify-content: flex-start;
+      @include mod('flex') {
+        padding: 0;
+        justify-content: end!important;
+        flex-direction: row;
+      }
+      @include mod('three') {
+        flex-direction: column;
+      }
+    }
+    @include el('label'){
+      @include mod('fun'){
+        margin-right:1rem;
+      }
+    }
+    @include el('inputText'){
+      width: 90%;
+    }
+  }
+}
+
+
+@include breakpoint(max-width 700px){
+  .orderDetails{
+    margin-bottom:2rem;
+    @include el('content'){
+      overflow: hidden;
+      overflow-x: scroll;
+    }
+    @include el('listItem'){
+      font-size:1rem;
+      line-height: 2rem;
+    }
+
+  }
+}
 @include breakpoint(max-width 650px){
   .notFind {
     @include el('imgWrapper') {
@@ -99,9 +139,6 @@
   }
 }
 
-
-
-
 @include breakpoint(max-width 500px){
   .addCartPopup{
     padding-bottom:1.5rem;
@@ -138,7 +175,6 @@
     }
   }
 }
-
 @include breakpoint(max-width 320px){
   .borderedSection{
     @include el('title'){
@@ -149,6 +185,9 @@
     }
   }
 }
+
+
+
 
 .color-list{
   @include breakpoint(max-width 1024px) {
@@ -206,3 +245,5 @@
     }
   }
 }
+
+

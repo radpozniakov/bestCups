@@ -1,8 +1,4 @@
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -216,7 +212,12 @@
                     <input id='password1Input' type="password" value="" class="formPreview__input">
                 </div>
 
-                <input type="submit" class="more  more_button_login" value="Войти">
+                <div class="formPreview__groupAct">
+                    <a href="http://radpoznyakov.96.lt/index.php?route=account/account" class="more  more_button_login more_button_back">Назад</a>
+                    <input type="submit" value="Продолжить" class="more  more_button_login">
+                </div>
+
+                <div class="alert-error"><i class="fa fa-exclamation-circle"></i> Неправильно заполнены поля E-Mail и/или пароль!</div>
             </form>
         </div>
     </section>
@@ -326,6 +327,7 @@
     </div>
 </footer>
 <script src="js/plugins/jquery-3.2.1.min.js"></script>
+<script src="https://use.fontawesome.com/c873fc24b7.js"></script>
 <script src="js/header.js"></script>
 </body>
 </html>

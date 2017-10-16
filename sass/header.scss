@@ -97,7 +97,7 @@
   background-color: rgb(240,240,240);
   @include el('item'){
     padding: 0rem 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.4rem;
     max-width: 15%;
   }
   @include el('title'){

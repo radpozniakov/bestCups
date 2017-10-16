@@ -61,4 +61,13 @@
     line-height: 1.6rem;
   }
 
+  @include el('readMore'){
+    @include font($Main-Font, 1rem, 400, $Blue-active);
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      color: darken($Blue-active, 10%);
+    }
+  }
+
 }

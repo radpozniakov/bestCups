@@ -150,6 +150,7 @@
     @include font($Main-Font, 1rem, 300, white);
     &:hover{
       color: $Dark;
+
     }
   }
 }

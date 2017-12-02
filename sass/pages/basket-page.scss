@@ -45,9 +45,10 @@
   }
   @include el('bodyRowItemTitle'){
     text-decoration: none;
-    color: $Dark;
+    color: $Blue-active;
     &:hover{
-      color: $Blue-active;
+      text-decoration: underline;
+      color: darken($Blue-active, 15%);
     }
   }
   @include el('bodyRowItemImg'){

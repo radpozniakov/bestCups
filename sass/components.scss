@@ -107,8 +107,13 @@ a.more,input.more{
 }
 .checkout--button{
   background-color: #72C954!important;
+  padding: .8rem 1.5rem;
+  border: none;
+  @include font($Main-Font, 1rem, 400, $Dark);
+
   &:hover{
     background-color: darken(#72C954, 10%)!important;
+    cursor: pointer;
   }
 }
 .star-list{
@@ -523,9 +528,10 @@ a.more,input.more{
     }
     @include mod('goOn'){
       border: $Blue-active solid 1px;
+      background-color: white;
       color: $Blue-active;
       &:hover{
-        background-color: lighten($Blue-active, 40%);
+        background-color: lighten($Blue-active, 40%)!important;
       }
     }
   }

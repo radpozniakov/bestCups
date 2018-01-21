@@ -111,7 +111,7 @@
          padding-right:4.3rem;
 
          ::after{
-           @include font($Main-Font, 1rem, 500, white);
+           @include font($Main-Font, 1rem, 500, $Blue-active);
          }
          a svg{
            width: 1.5rem;

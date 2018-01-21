@@ -2,10 +2,62 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  @include mod('withSide'){
+    width: 85%;
+    @media all and (max-width: 890px) {
+      width: 100%;
+    }
+  }
   .product{
     margin: 0 1.5rem;
     margin-bottom: 3rem;
   }
+}
+.productCategories{
+  width: 15%;
+  @media all and (max-width: 890px) {
+    width: 100%;
+    margin-bottom:1rem;
+  }
+  @include el('title'){
+    @include font($Main-Font, 1.15rem, 400, $Dark);
+    margin-top:0;
+    @media all and (max-width: 890px){
+      text-align: center;
+    }
+  }
+  @include el('list'){
+    list-style: none;
+    padding-left:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @media all and (max-width: 890px){
+      justify-content: center;
+    }
+  }
+  @include el('item'){
+    margin: 0.5rem;
+    padding: 0.5rem 0;
+    margin-right: 0.5rem;
+    margin-left:0;
+    @media all and (max-width: 890px) {
+      margin: 0.5rem 1rem;
+      border-bottom: none;
+    }
+  }
+  @include el('href'){
+    @include font($Main-Font, 1rem, 400, $Blue-active);
+    background-color: $Blue-light;
+    padding: 0.5rem 0.8rem;
+    border-radius: 10rem;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      color: darken($Blue-active, 10%);
+    }
+  }
+
 }
 
 .product{

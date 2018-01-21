@@ -19,7 +19,13 @@ body{
     @include mod('wide'){
       max-width: 100%;
     }
+  @include mod('withSide'){
+      display: flex;
+    flex-wrap: wrap;
+    }
 }
+
+
 .color-list{
   display: flex;
   justify-content: flex-start;

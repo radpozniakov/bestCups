@@ -161,19 +161,14 @@
 
     @include mod('basket'){
       position: relative;
-      ::after{
+      ::before{
        content: attr(data-counter);
-        display: none;
-        top: -1rem;
-        left: 1rem;
-        background-color: $Blue-active;
-        width: 1.6rem;
-        height: 1.6rem;
+        top: -1.2rem;
+        left: .5rem;
         position: absolute;
-        border-radius: 50%;
         text-align: center;
         line-height: 1.6rem;
-        @include font($Main-Font, .9rem, 300, white);
+        @include font($Main-Font, 1.1rem, 500, $Blue-active);
       }
     }
     @include mod('visibleCounter'){
